@@ -1,4 +1,5 @@
 How to start runner:
 
-1. mvn clean install
-2. hadoop jar target/CarCrashes-1.0-SNAPSHOT.jar org.cthimm.CC_Runner /user/c.thimm/Motor_Vehicle_Collisions_-_Person.csv /output-crashes
+1. Start hadoop (docker or start-all.sh/stop-all.sh script)
+2. mvn clean install
+3. hadoop jar target/CarCrashes-1.0-SNAPSHOT.jar org.cthimm.CC_Runner /user/c.thimm/Motor_Vehicle_Collisions_-_Person.csv /output-crashes
