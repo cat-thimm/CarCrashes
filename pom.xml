@@ -26,6 +26,13 @@
             <artifactId>hadoop-mapreduce-client-core</artifactId>
             <version>3.3.6</version>
         </dependency>
+
+        <dependency>
+            <groupId>org.mongodb.mongo-hadoop</groupId>
+            <artifactId>mongo-hadoop-core</artifactId>
+            <version>1.5.1</version>
+        </dependency>
+
     </dependencies>
 
 </project>
