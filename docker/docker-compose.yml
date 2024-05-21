@@ -1,6 +1,3 @@
-# Use root/example as user/password credentials
-version: '3.1'
-
 services:
 
   mongo:
@@ -22,6 +19,16 @@ services:
       ME_CONFIG_MONGODB_ADMINPASSWORD: letmein
       ME_CONFIG_MONGODB_URL: mongodb://root:letmein@mongo:27017/
       ME_CONFIG_BASICAUTH: false
+
+  jupyter:
+    image: dbsfdit/jupyter:2023.ss
+    container_name: dbsfdit-jupyter
+    ports:
+      - "5678:8888"
+    volumes:
+      - ../main:/home/jovyan/main
+
+
 
   namenode:
     image: bde2020/hadoop-namenode:2.0.0-hadoop3.2.1-java8
