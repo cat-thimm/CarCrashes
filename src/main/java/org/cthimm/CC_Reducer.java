@@ -1,27 +1,22 @@
 package org.cthimm;
 
 import org.apache.hadoop.io.Text;
-import org.apache.hadoop.mapred.MapReduceBase;
-import org.apache.hadoop.mapred.OutputCollector;
-import org.apache.hadoop.mapred.Reducer;
-import org.apache.hadoop.mapred.Reporter;
+import org.apache.hadoop.mapreduce.Reducer;
 
 import java.io.IOException;
-import java.util.Iterator;
 
-public class CC_Reducer extends MapReduceBase implements Reducer<Text, Text, Text, Text> {
-
-    public void reduce(Text key, Iterator<Text> values, OutputCollector<Text, Text> output,
-                       Reporter reporter) throws IOException {
+public class CC_Reducer extends Reducer<Text, Text, Text, Text> {
+    @Override
+    protected void reduce(Text key, Iterable<Text> values, Context context) throws IOException, InterruptedException {
         StringBuilder jsonArray = new StringBuilder("[");
-        while (values.hasNext()) {
-            String jsonValue = values.next().toString();
-            jsonArray.append(jsonValue);
-            if (values.hasNext()) {
-                jsonArray.append(",");
-            }
+        for (Text value : values) {
+            jsonArray.append(value.toString()).append(",");
+        }
+        // Remove the last comma
+        if (jsonArray.length() > 1) {
+            jsonArray.setLength(jsonArray.length() - 1);
         }
         jsonArray.append("]");
-        output.collect(key, new Text(jsonArray.toString()));
+        context.write(key, new Text(jsonArray.toString()));
     }
 }

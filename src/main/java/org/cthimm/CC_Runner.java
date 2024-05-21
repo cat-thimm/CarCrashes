@@ -1,15 +1,17 @@
 package org.cthimm;
 
+import org.apache.hadoop.conf.Configuration;
 import org.apache.hadoop.fs.Path;
 import org.apache.hadoop.io.Text;
 import org.apache.hadoop.mapred.*;
+import org.apache.hadoop.util.ToolRunner;
 
 import java.io.IOException;
 
-public class CC_Runner {
 
-    public static void main(String[] args) throws IOException {
-        JobConf conf = new JobConf(CC_Runner.class);
+public class CC_Runner {
+    public static void main(String[] args) throws Exception {
+        /* JobConf conf = new JobConf(CC_Runner.class);
 
         conf.setJobName("CarCrashes");
         conf.setOutputKeyClass(Text.class);
@@ -24,6 +26,7 @@ public class CC_Runner {
         FileInputFormat.setInputPaths(conf,new Path(args[0]));
         FileOutputFormat.setOutputPath(conf,new Path(args[1]));
 
-        JobClient.runJob(conf);
+        JobClient.runJob(conf); */
+
     }
 }
