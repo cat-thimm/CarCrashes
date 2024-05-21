@@ -39,10 +39,10 @@ $EXEC_CMD '
     -reducer reducer.py \
     -input ./raw_data/persons.csv \
     -output /output
-' > script_output.log 2>&1  # Redirect both stdout and stderr to a log file
+' > debug/script_output.log 2>&1  # Redirect both stdout and stderr to a log file
 
 # Print the output log for review
-cat script_output.log
+cat debug/script_output.log
 
 # Keep bash open
 /bin/bash
