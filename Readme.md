@@ -23,3 +23,10 @@ Big Data Evaluation of car crashes in New York City.
 
 ## Stop MongoDB
 - docker-compose stop/down
+
+## Mongo Shell
+`docker ps` -> Get mongo container id (e.g. e88256aaf0df)
+
+`docker exec -it e88256aaf0df bash` 
+
+`mongo mongodb://localhost:27017 -u root -p letmein`
