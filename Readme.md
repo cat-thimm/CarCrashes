@@ -8,20 +8,13 @@ Big Data Evaluation of car crashes in New York City.
 ## Tools
 - MongoDB
 - Hadoop
+- Python
 
-
-## How to start runner:
-
-1. Start hadoop (docker or start-all.sh/stop-all.sh script)
-2. mvn clean install
-3. hadoop jar target/CarCrashes-1.0-SNAPSHOT.jar org.cthimm.CC_Runner /user/c.thimm/Motor_Vehicle_Collisions_-_Person.csv /output-crashes
-
-
-## Start MongoDB
+## Start MongoDB, Hadoop and Jupyter
 - docker-compose build --no-cache
 - docker-compose up -d
 
-## Stop MongoDB
+## Stop MongoDB, Hadoop and Jupyter
 - docker-compose stop/down
 
 ## Mongo Shell
