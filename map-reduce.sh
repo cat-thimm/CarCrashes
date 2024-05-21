@@ -2,8 +2,17 @@
 docker cp ./main/mapper.ipynb namenode:/mapper.py
 docker cp ./main/reducer.ipynb namenode:/reducer.py
 
+# Check if the current operating system is Windows
+if [[ "$OSTYPE" == "msys" ]]; then
+    # Running on Windows, prefix the docker exec command with winpty
+    EXEC_CMD="winpty docker exec -it namenode bash -c"
+else
+    # Running on other platforms, use the regular docker exec command
+    EXEC_CMD="docker exec -it namenode bash -c"
+fi
+
 # Execute all commands inside the Docker container
-winpty docker exec -it namenode bash -c '
+$EXEC_CMD '
   set -e  # Exit immediately if any command exits with a non-zero status
   set -x  # Print each command before executing it for debugging
 
