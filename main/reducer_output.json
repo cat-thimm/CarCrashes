@@ -1,0 +1,1 @@
+[{"COLLISION_ID": "1", "EMOTIONAL_STATUS": "calm", "BODILY_INJURY": "none", "PERSON_TYPE": "driver", "PERSON_AGE": "30", "PERSON_SEX": "M", "SAFETY_EQUIPMENT": "seatbelt"}, {"COLLISION_ID": "2", "EMOTIONAL_STATUS": "angry", "BODILY_INJURY": "minor", "PERSON_TYPE": "passenger", "PERSON_AGE": "25", "PERSON_SEX": "F", "SAFETY_EQUIPMENT": "airbag"}]

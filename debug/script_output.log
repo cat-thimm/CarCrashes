@@ -1,3 +1,0 @@
-+ '[' '!' -d /input ']'
-+ hadoop fs -mkdir -p /input
-^Cç^Cç^C^C^Cçç

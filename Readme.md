@@ -38,3 +38,19 @@ The Dockerfile will start hadoop and execute the initial map reduce job using th
 > 
 > docker run -it hadoop-job
 
+
+### Testing mapper and reducer
+
+Open up a console and check the following commands:
+
+>`cd main`
+> 
+> `cat sample.csv | python mapper.py > mapper_output.json`
+> 
+> `cat mapper_output.json | python reducer.py > reducer_output.json`
+
+It should generate the reducer_output.json in the following style:
+
+``[{"COLLISION_ID": "1", "EMOTIONAL_STATUS": "calm", "BODILY_INJURY": "none", "PERSON_TYPE": "driver", "PERSON_AGE": "30", "PERSON_SEX": "M", "SAFETY_EQUIPMENT": "seatbelt"}, {"COLLISION_ID": "2", "EMOTIONAL_STATUS": "angry", "BODILY_INJURY": "minor", "PERSON_TYPE": "passenger", "PERSON_AGE": "25", "PERSON_SEX": "F", "SAFETY_EQUIPMENT": "airbag"}]
+``
+
