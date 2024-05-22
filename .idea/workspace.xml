@@ -5,21 +5,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="28dbcf8a-54b4-410a-994d-4f9ea053a098" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/CarCrashes.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main/mapper.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main/reducer.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main/sample.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Makefile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/datanode/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nodemanager/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resourcemanager/Dockerfile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/Readme.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/debug/script_output.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/main.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/main/notebook/main.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/mapper.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/main/notebook/mapper.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/reducer.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/main/notebook/reducer.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/run-hadoop-job.sh" beforeDir="false" afterPath="$PROJECT_DIR$/run-hadoop-job.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/namenode/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/.ipynb_checkpoints/main-checkpoint.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/map-reduce/.ipynb_checkpoints/main-checkpoint.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/.ipynb_checkpoints/mapper-checkpoint.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/map-reduce/.ipynb_checkpoints/mapper-checkpoint.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/.ipynb_checkpoints/reducer-checkpoint.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/map-reduce/.ipynb_checkpoints/reducer-checkpoint.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/mapper.py" beforeDir="false" afterPath="$PROJECT_DIR$/map-reduce/mapper.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/mapper_output.json" beforeDir="false" afterPath="$PROJECT_DIR$/map-reduce/mapper_output.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/notebook/main.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/map-reduce/notebook/main.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/notebook/mapper.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/map-reduce/notebook/mapper.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/notebook/reducer.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/map-reduce/notebook/reducer.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/reducer.py" beforeDir="false" afterPath="$PROJECT_DIR$/map-reduce/reducer.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/reducer_output.json" beforeDir="false" afterPath="$PROJECT_DIR$/map-reduce/reducer_output.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/sample.csv" beforeDir="false" afterPath="$PROJECT_DIR$/map-reduce/sample.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run-hadoop-job.sh" beforeDir="false" afterPath="$PROJECT_DIR$/namenode/run-hadoop-job.sh" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,6 +34,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="Dockerfile" />
       </list>
     </option>
   </component>
@@ -57,32 +62,37 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Docker.Dockerfile.executor&quot;: &quot;Run&quot;,
-    &quot;Maven.CarCrashes [clean].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.CarCrashes [install].executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.go.formatter.settings.were.checked&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.go.migrated.go.modules.settings&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;go.import.settings.migrated&quot;: &quot;true&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Docker.Dockerfile.executor": "Run",
+    "Docker.datanode/Dockerfile.executor": "Run",
+    "Docker.namenode/Dockerfile.executor": "Run",
+    "Makefile Target.build.executor": "Run",
+    "Maven.CarCrashes [clean].executor": "Run",
+    "Maven.CarCrashes [install].executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.go.formatter.settings.were.checked": "true",
+    "RunOnceActivity.go.migrated.go.modules.settings": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "main",
+    "go.import.settings.migrated": "true",
+    "kotlin-language-version-configured": "true",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Cati\Documents\GitHub\CarCrashes\namenode" />
+      <recent name="C:\Users\Cati\Documents\GitHub\CarCrashes\main\notebook" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/raw_data" />
       <recent name="$PROJECT_DIR$/debug" />
@@ -94,7 +104,13 @@
       <command value="mvn install" />
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Docker.namenode/Dockerfile">
+    <configuration name="build" type="MAKEFILE_TARGET_RUN_CONFIGURATION" factoryName="Makefile" temporary="true">
+      <makefile filename="$PROJECT_DIR$/Makefile" target="build" workingDirectory="" arguments="">
+        <envs />
+      </makefile>
+      <method v="2" />
+    </configuration>
     <configuration name="Dockerfile" type="docker-deploy" factoryName="dockerfile" temporary="true" server-name="Docker">
       <deployment type="dockerfile">
         <settings>
@@ -109,8 +125,27 @@
       </deployment>
       <method v="2" />
     </configuration>
+    <configuration name="datanode/Dockerfile" type="docker-deploy" factoryName="dockerfile" temporary="true" server-name="Docker">
+      <deployment type="dockerfile">
+        <settings>
+          <option name="sourceFilePath" value="datanode/Dockerfile" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <configuration name="namenode/Dockerfile" type="docker-deploy" factoryName="dockerfile" temporary="true" server-name="Docker">
+      <deployment type="dockerfile">
+        <settings>
+          <option name="sourceFilePath" value="namenode/Dockerfile" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Docker.namenode/Dockerfile" />
+        <item itemvalue="Docker.datanode/Dockerfile" />
+        <item itemvalue="Makefile Target.build" />
         <item itemvalue="Docker.Dockerfile" />
       </list>
     </recent_temporary>
@@ -136,7 +171,7 @@
       <workItem from="1716373150542" duration="4000" />
       <workItem from="1716373395038" duration="1213000" />
       <workItem from="1716375890174" duration="8000" />
-      <workItem from="1716377374898" duration="2268000" />
+      <workItem from="1716377374898" duration="5958000" />
     </task>
     <servers />
   </component>

@@ -17,9 +17,6 @@ else
 fi
 
 # Run the Hadoop streaming job
-
-
-# Run the Hadoop streaming job
 #hadoop jar /opt/hadoop-3.2.1/share/hadoop/tools/lib/hadoop-streaming-3.2.1.jar \
 #  -files /mapper.py,/reducer.py \
 #  -mapper mapper.py \
