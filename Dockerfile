@@ -1,8 +1,5 @@
 # Use an appropriate base image for Hadoop
-FROM bde2020/hadoop-base:2.0.0-hadoop2.7.4-java8
-
-# Set environment variables
-ENV HADOOP_VERSION 3.2.1
+FROM bde2020/hadoop-namenode:2.0.0-hadoop3.2.1-java8
 
 # Create necessary directories
 RUN mkdir -p /input /raw_data

@@ -10,7 +10,7 @@ cp /raw_data/persons.csv /input/persons.csv
 hadoop fs -mkdir -p /input
 hdfs dfs -put /input/persons.csv /input
 
-hadoop jar /opt/hadoop/share/hadoop/tools/lib/hadoop-streaming-${HADOOP_VERSION}.jar \
+hadoop jar /opt/hadoop/share/hadoop/tools/lib/hadoop-streaming-3.2.1.jar \
   -file /mapper.py \
   -mapper /mapper.py \
   -file /reducer.py \
