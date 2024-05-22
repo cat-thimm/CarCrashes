@@ -30,6 +30,11 @@ Add a folder "raw_data" and put the persons.csv file in it.
 
 `mongo mongodb://localhost:27017 -u root -p letmein`
 
-## Start Script 
+## Start Dockerfile 
 
-Start the `map-reducs.sh` script.
+The Dockerfile will start hadoop and execute the initial map reduce job using the python mapper.
+
+> docker build -t hadoop-job .
+> 
+> docker run -it hadoop-job
+
