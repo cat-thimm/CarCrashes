@@ -5,21 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="28dbcf8a-54b4-410a-994d-4f9ea053a098" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/CarCrashes.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/map-reduce/.ipynb_checkpoints/main-checkpoint.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/namenode/map-reduce/.ipynb_checkpoints/main-checkpoint.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/map-reduce/.ipynb_checkpoints/mapper-checkpoint.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/namenode/map-reduce/.ipynb_checkpoints/mapper-checkpoint.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/map-reduce/.ipynb_checkpoints/reducer-checkpoint.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/namenode/map-reduce/.ipynb_checkpoints/reducer-checkpoint.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/map-reduce/mapper.py" beforeDir="false" afterPath="$PROJECT_DIR$/namenode/map-reduce/mapper.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/map-reduce/mapper_output.json" beforeDir="false" afterPath="$PROJECT_DIR$/namenode/map-reduce/mapper_output.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/map-reduce/notebook/main.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/namenode/map-reduce/notebook/main.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/map-reduce/notebook/mapper.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/namenode/map-reduce/notebook/mapper.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/map-reduce/notebook/reducer.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/namenode/map-reduce/notebook/reducer.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/map-reduce/reducer.py" beforeDir="false" afterPath="$PROJECT_DIR$/namenode/map-reduce/reducer.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/map-reduce/reducer_output.json" beforeDir="false" afterPath="$PROJECT_DIR$/namenode/map-reduce/reducer_output.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/map-reduce/sample.csv" beforeDir="false" afterPath="$PROJECT_DIR$/namenode/map-reduce/sample.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/namenode/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/namenode/Dockerfile" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -59,38 +47,38 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Docker.Dockerfile.executor": "Run",
-    "Docker.datanode/Dockerfile.executor": "Run",
-    "Docker.namenode/Dockerfile.executor": "Run",
-    "Makefile Target.build.executor": "Run",
-    "Maven.CarCrashes [clean].executor": "Run",
-    "Maven.CarCrashes [install].executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.go.formatter.settings.were.checked": "true",
-    "RunOnceActivity.go.migrated.go.modules.settings": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "main",
-    "go.import.settings.migrated": "true",
-    "kotlin-language-version-configured": "true",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Docker.Dockerfile.executor&quot;: &quot;Run&quot;,
+    &quot;Docker.datanode/Dockerfile.executor&quot;: &quot;Run&quot;,
+    &quot;Docker.namenode/Dockerfile.executor&quot;: &quot;Run&quot;,
+    &quot;Makefile Target.build.executor&quot;: &quot;Run&quot;,
+    &quot;Maven.CarCrashes [clean].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.CarCrashes [install].executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.go.formatter.settings.were.checked&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.go.migrated.go.modules.settings&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;go.import.settings.migrated&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/namenode" />
       <recent name="C:\Users\Cati\Documents\GitHub\CarCrashes\namenode" />
+      <recent name="$PROJECT_DIR$/namenode" />
       <recent name="C:\Users\Cati\Documents\GitHub\CarCrashes\main\notebook" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/raw_data" />
@@ -142,6 +130,7 @@
     <recent_temporary>
       <list>
         <item itemvalue="Docker.namenode/Dockerfile" />
+        <item itemvalue="Makefile Target.build" />
         <item itemvalue="Docker.datanode/Dockerfile" />
         <item itemvalue="Docker.Dockerfile" />
       </list>
@@ -168,7 +157,7 @@
       <workItem from="1716373150542" duration="4000" />
       <workItem from="1716373395038" duration="1213000" />
       <workItem from="1716375890174" duration="8000" />
-      <workItem from="1716377374898" duration="5958000" />
+      <workItem from="1716377374898" duration="7169000" />
     </task>
     <servers />
   </component>
