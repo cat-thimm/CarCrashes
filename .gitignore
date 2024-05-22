@@ -1,4 +1,4 @@
-raw_data/*
-!raw_data/
+namenode/raw_data/*
+!namenode/raw_data/
 .idea
 debug

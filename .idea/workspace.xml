@@ -5,25 +5,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="28dbcf8a-54b4-410a-994d-4f9ea053a098" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Makefile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/datanode/Dockerfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/nodemanager/Dockerfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resourcemanager/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CarCrashes.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/namenode/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/.ipynb_checkpoints/main-checkpoint.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/map-reduce/.ipynb_checkpoints/main-checkpoint.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/.ipynb_checkpoints/mapper-checkpoint.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/map-reduce/.ipynb_checkpoints/mapper-checkpoint.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/.ipynb_checkpoints/reducer-checkpoint.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/map-reduce/.ipynb_checkpoints/reducer-checkpoint.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/mapper.py" beforeDir="false" afterPath="$PROJECT_DIR$/map-reduce/mapper.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/mapper_output.json" beforeDir="false" afterPath="$PROJECT_DIR$/map-reduce/mapper_output.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/notebook/main.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/map-reduce/notebook/main.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/notebook/mapper.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/map-reduce/notebook/mapper.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/notebook/reducer.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/map-reduce/notebook/reducer.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/reducer.py" beforeDir="false" afterPath="$PROJECT_DIR$/map-reduce/reducer.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/reducer_output.json" beforeDir="false" afterPath="$PROJECT_DIR$/map-reduce/reducer_output.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/sample.csv" beforeDir="false" afterPath="$PROJECT_DIR$/map-reduce/sample.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/run-hadoop-job.sh" beforeDir="false" afterPath="$PROJECT_DIR$/namenode/run-hadoop-job.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/map-reduce/.ipynb_checkpoints/main-checkpoint.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/namenode/map-reduce/.ipynb_checkpoints/main-checkpoint.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/map-reduce/.ipynb_checkpoints/mapper-checkpoint.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/namenode/map-reduce/.ipynb_checkpoints/mapper-checkpoint.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/map-reduce/.ipynb_checkpoints/reducer-checkpoint.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/namenode/map-reduce/.ipynb_checkpoints/reducer-checkpoint.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/map-reduce/mapper.py" beforeDir="false" afterPath="$PROJECT_DIR$/namenode/map-reduce/mapper.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/map-reduce/mapper_output.json" beforeDir="false" afterPath="$PROJECT_DIR$/namenode/map-reduce/mapper_output.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/map-reduce/notebook/main.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/namenode/map-reduce/notebook/main.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/map-reduce/notebook/mapper.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/namenode/map-reduce/notebook/mapper.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/map-reduce/notebook/reducer.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/namenode/map-reduce/notebook/reducer.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/map-reduce/reducer.py" beforeDir="false" afterPath="$PROJECT_DIR$/namenode/map-reduce/reducer.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/map-reduce/reducer_output.json" beforeDir="false" afterPath="$PROJECT_DIR$/namenode/map-reduce/reducer_output.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/map-reduce/sample.csv" beforeDir="false" afterPath="$PROJECT_DIR$/namenode/map-reduce/sample.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/namenode/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/namenode/Dockerfile" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,6 +71,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.go.formatter.settings.were.checked": "true",
     "RunOnceActivity.go.migrated.go.modules.settings": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "main",
     "go.import.settings.migrated": "true",
@@ -91,11 +89,11 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/namenode" />
       <recent name="C:\Users\Cati\Documents\GitHub\CarCrashes\namenode" />
       <recent name="C:\Users\Cati\Documents\GitHub\CarCrashes\main\notebook" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/raw_data" />
-      <recent name="$PROJECT_DIR$/debug" />
     </key>
   </component>
   <component name="RunAnythingCache">
@@ -145,7 +143,6 @@
       <list>
         <item itemvalue="Docker.namenode/Dockerfile" />
         <item itemvalue="Docker.datanode/Dockerfile" />
-        <item itemvalue="Makefile Target.build" />
         <item itemvalue="Docker.Dockerfile" />
       </list>
     </recent_temporary>
