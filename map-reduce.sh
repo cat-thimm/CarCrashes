@@ -11,21 +11,19 @@ else
     EXEC_CMD="docker exec -it namenode bash -c"
 fi
 
+echo $EXEC_CMD
+
 # Execute all commands inside the Docker container
 $EXEC_CMD '
   set -e  # Exit immediately if any command exits with a non-zero status
   set -x  # Print each command before executing it for debugging
 
-  if [ ! -d "/input" ]; then
-    mkdir /input
-    echo "Hello World" > /input/f1.txt
-    echo "Hello Docker" > /input/f2.txt
-    echo "Hello Hadoop" > /input/f3.txt
-    echo "Hello MapReduce" > /input/f4.txt
+  if [ -d "/input" ]; then
+    rm /input
   fi
+  mkdir /input
 
-  # Source Hadoop environment if necessary
-  # source ./docker/hadoop.env
+  persons.csv > /input/persons.csv
 
   # Create HDFS directory and put files into it
   hadoop fs -mkdir -p /input
@@ -39,6 +37,8 @@ $EXEC_CMD '
     -reducer reducer.py \
     -input ./raw_data/persons.csv \
     -output /output
+
+  exit
 ' > debug/script_output.log 2>&1  # Redirect both stdout and stderr to a log file
 
 # Print the output log for review
