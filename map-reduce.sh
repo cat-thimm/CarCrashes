@@ -30,7 +30,7 @@ else
     EXEC_CMD="docker exec -it namenode"
 fi
 
-echo $EXEC_CMD
+# echo $EXEC_CMD
 
 # Execute all commands inside the Docker container
 $EXEC_CMD bash -c '
@@ -53,6 +53,8 @@ $EXEC_CMD bash -c '
     -reducer /reducer.py \
     -input /input/persons.csv \
     -output /output
+
+  exit
 ' > debug/script_output.log 2>&1  # Redirect both stdout and stderr to a log file
 
 # Print the output log for review
