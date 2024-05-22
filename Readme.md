@@ -10,6 +10,12 @@ Big Data Evaluation of car crashes in New York City.
 - Hadoop
 - Python
 
+# Steps
+
+## Add Raw Data
+
+Add a folder "raw_data" and put the persons.csv file in it.
+
 ## Start MongoDB, Hadoop and Jupyter
 - docker-compose build --no-cache
 - docker-compose up -d
@@ -23,3 +29,7 @@ Big Data Evaluation of car crashes in New York City.
 `docker exec -it e88256aaf0df bash` 
 
 `mongo mongodb://localhost:27017 -u root -p letmein`
+
+## Start Script 
+
+Start the `map-reducs.sh` script.
