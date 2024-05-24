@@ -7,6 +7,7 @@
     <list default="true" id="28dbcf8a-54b4-410a-994d-4f9ea053a098" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/Readme.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/namenode/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/namenode/Dockerfile" afterDir="false" />
     </list>
@@ -139,8 +140,7 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-js-predefined-1d06a55b98c1-91d5c284f522-JavaScript-PY-241.15989.155" />
-        <option value="bundled-python-sdk-babbdf50b680-7c6932dee5e4-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-241.15989.155" />
+        <option value="bundled-js-predefined-1d06a55b98c1-91d5c284f522-JavaScript-IU-241.15989.150" />
       </set>
     </attachedChunks>
   </component>
@@ -157,7 +157,7 @@
       <workItem from="1716373150542" duration="4000" />
       <workItem from="1716373395038" duration="1213000" />
       <workItem from="1716375890174" duration="8000" />
-      <workItem from="1716377374898" duration="7169000" />
+      <workItem from="1716377374898" duration="10954000" />
     </task>
     <servers />
   </component>

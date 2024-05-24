@@ -6,7 +6,6 @@ RUN apt install -y --no-install-recommends \
   python3 python3-pip \
   nano
 
-
 # Create necessary directories
 RUN mkdir -p /input /raw_data
 

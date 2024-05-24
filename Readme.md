@@ -14,7 +14,7 @@ Big Data Evaluation of car crashes in New York City.
 
 ## Add Raw Data
 
-Add a folder "raw_data" and put the persons.csv file in it.
+Add a folder in `/namenode/raw_data` and put the persons.csv file in it.
 
 ## Start MongoDB, Hadoop and Jupyter
 - docker-compose build --no-cache
