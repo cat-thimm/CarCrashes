@@ -43,6 +43,9 @@ services:
       - CLUSTER_NAME=test
     env_file:
       - hadoop.env
+    networks:
+      - hadoop
+    platform: linux/amd64
 
   datanode:
     build:
@@ -56,6 +59,9 @@ services:
       SERVICE_PRECONDITION: "namenode:9870"
     env_file:
       - hadoop.env
+    networks:
+      - hadoop
+    platform: linux/amd64
 
   resourcemanager:
     build:
@@ -67,6 +73,9 @@ services:
       SERVICE_PRECONDITION: "namenode:9000 namenode:9870 datanode:9864"
     env_file:
       - hadoop.env
+    networks:
+      - hadoop
+    platform: linux/amd64
 
   nodemanager1:
     build:
@@ -78,6 +87,9 @@ services:
       SERVICE_PRECONDITION: "namenode:9000 namenode:9870 datanode:9864 resourcemanager:8088"
     env_file:
       - hadoop.env
+    networks:
+      - hadoop
+    platform: linux/amd64
 
   historyserver:
     image: bde2020/hadoop-historyserver:2.0.0-hadoop3.2.1-java8
@@ -89,11 +101,16 @@ services:
       - hadoop_historyserver:/hadoop/yarn/timeline
     env_file:
       - hadoop.env
-
-
+    networks:
+      - hadoop
+    platform: linux/amd64
 
 volumes:
   data: {}
   hadoop_namenode:
   hadoop_datanode:
   hadoop_historyserver:
+
+networks:
+  hadoop:
+    driver: bridge
