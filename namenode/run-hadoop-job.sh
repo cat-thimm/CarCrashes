@@ -3,7 +3,7 @@ set -e
 set -x
 
 # Debugging: List contents of /raw_data to verify the presence of persons.csv
-hadoop dfs -ls
+# hadoop dfs -ls
 
 # Check if the /raw_data directory exists in HDFS and create it if not
 hadoop fs -mkdir -p /raw_data
