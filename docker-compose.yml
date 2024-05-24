@@ -31,85 +31,67 @@ services:
     build:
       context: ./
       dockerfile: ./namenode/Dockerfile
-    container_name: namenode
-    restart: always
+    hostname: namenode
+    command: [ "hdfs", "namenode" ]
     ports:
       - 9870:9870
-      - 9000:9000
-    volumes:
-      - hadoop_namenode:/hadoop/dfs/name
-    environment:
-      - CLUSTER_NAME=test
     env_file:
       - hadoop.env
-    networks:
-      - hadoop
-    platform: linux/amd64
+    environment:
+      ENSURE_NAMENODE_DIR: "/tmp/hadoop-root/dfs/name"
 
   datanode:
     build:
       context: ./
       dockerfile: ./datanode/Dockerfile
     container_name: datanode
-    restart: always
-    volumes:
-      - hadoop_datanode:/hadoop/dfs/data
-    environment:
-      SERVICE_PRECONDITION: "namenode:9870"
+    command: [ "hdfs", "datanode" ]
     env_file:
       - hadoop.env
-    networks:
-      - hadoop
-    platform: linux/amd64
 
   resourcemanager:
     build:
       context: ./
       dockerfile: ./resourcemanager/Dockerfile
     container_name: resourcemanager
-    restart: always
-    environment:
-      SERVICE_PRECONDITION: "namenode:9000 namenode:9870 datanode:9864"
+    hostname: resourcemanager
+    command: [ "yarn", "resourcemanager" ]
+    ports:
+      - 8088:8088
     env_file:
       - hadoop.env
-    networks:
-      - hadoop
-    platform: linux/amd64
+    volumes:
+      - ./test.sh:/opt/test.sh
 
   nodemanager1:
     build:
       context: ./
       dockerfile: ./nodemanager/Dockerfile
     container_name: nodemanager
-    restart: always
-    environment:
-      SERVICE_PRECONDITION: "namenode:9000 namenode:9870 datanode:9864 resourcemanager:8088"
+    command: [ "yarn", "nodemanager" ]
     env_file:
-      - hadoop.env
-    networks:
-      - hadoop
-    platform: linux/amd64
+        - hadoop.env
 
-  historyserver:
-    image: bde2020/hadoop-historyserver:2.0.0-hadoop3.2.1-java8
-    container_name: historyserver
-    restart: always
-    environment:
-      SERVICE_PRECONDITION: "namenode:9000 namenode:9870 datanode:9864 resourcemanager:8088"
-    volumes:
-      - hadoop_historyserver:/hadoop/yarn/timeline
-    env_file:
-      - hadoop.env
-    networks:
-      - hadoop
-    platform: linux/amd64
+#  historyserver:
+#    image: bde2020/hadoop-historyserver:2.0.0-hadoop3.2.1-java8
+#    container_name: historyserver
+#    restart: always
+#    environment:
+#      SERVICE_PRECONDITION: "namenode:9000 namenode:9870 datanode:9864 resourcemanager:8088"
+#    volumes:
+#      - hadoop_historyserver:/hadoop/yarn/timeline
+#    env_file:
+#      - hadoop.env
+#    networks:
+#      - hadoop
+#    platform: linux/amd64
 
 volumes:
   data: {}
   hadoop_namenode:
   hadoop_datanode:
-  hadoop_historyserver:
+  # hadoop_historyserver:
 
-networks:
-  hadoop:
-    driver: bridge
+#networks:
+#  hadoop:
+#    driver: bridge

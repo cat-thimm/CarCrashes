@@ -1,9 +1,7 @@
-FROM bde2020/hadoop-namenode:2.0.0-hadoop3.2.1-java8
+FROM apache/hadoop:3
 
-#RUN apt update
-#RUN apt install -y --no-install-recommends \
-#  python3 python3-pip \
-#  nano
+RUN apk update
+RUN apk add python -y --no-install-recommends
 
 # Create necessary directories
 RUN mkdir -p /input /raw_data

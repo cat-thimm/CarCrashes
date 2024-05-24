@@ -1,4 +1,4 @@
-FROM bde2020/hadoop-datanode:2.0.0-hadoop3.2.1-java8
+FROM apache/hadoop:3
 
 #RUN apt update
 #RUN apt install -y --no-install-recommends \

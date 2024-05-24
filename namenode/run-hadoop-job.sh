@@ -6,14 +6,14 @@ set -x
 # hadoop dfs -ls
 
 # Check if the /raw_data directory exists in HDFS and create it if not
-hadoop fs -mkdir -p /raw_data
+yarn fs -mkdir -p /raw_data
 
 # Check if persons.csv exists in HDFS and only put it if it does not exist
-if hadoop fs -test -e /raw_data/persons.csv; then
+if yarn fs -test -e /raw_data/persons.csv; then
   echo "persons.csv already exists in HDFS, skipping upload."
 else
   echo "persons.csv does not exist in HDFS, uploading."
-  hdfs dfs -put /raw_data/persons.csv /raw_data
+  yarn dfs -put /raw_data/persons.csv /raw_data
 fi
 
 # Run the Hadoop streaming job
@@ -24,7 +24,7 @@ fi
 #  -input /raw_data/persons.csv \
 #  -output /output
 
-hadoop jar /opt/hadoop-3.2.1/share/hadoop/tools/lib/hadoop-streaming-3.2.1.jar \
+yarn jar /opt/hadoop-3.2.1/share/hadoop/tools/lib/hadoop-streaming-3.2.1.jar \
   -files /mapper.py,/reducer.py \
   -mapper "python mapper.py" \
   -reducer "python reducer.py" \
@@ -34,7 +34,7 @@ hadoop jar /opt/hadoop-3.2.1/share/hadoop/tools/lib/hadoop-streaming-3.2.1.jar \
 
 
 # Check if the job completed successfully and the output directory exists
-if hadoop fs -test -e /output; then
+if yarn fs -test -e /output; then
   echo "Hadoop streaming job completed successfully."
 else
   echo "Hadoop streaming job failed."
