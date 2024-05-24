@@ -9,14 +9,14 @@ RUN apt install -y --no-install-recommends \
 RUN mkdir -p /input /raw_data
 
 # Copy the mapper and reducer scripts into the container
-COPY map-reduce/mapper.py /mapper.py
-COPY map-reduce/reducer.py /reducer.py
+COPY namenode/map-reduce/mapper.py /mapper.py
+COPY namenode/map-reduce/reducer.py /reducer.py
 
 # Copy the persons.csv file into the container
-COPY raw_data/persons.csv /raw_data/persons.csv
+COPY namenode/raw_data/persons.csv /raw_data/persons.csv
 
 # Copy the run-hadoop-job script into the container
-COPY run-hadoop-job.sh /run-hadoop-job.sh
+COPY namenode/run-hadoop-job.sh /run-hadoop-job.sh
 
 # Make the script executable
 # RUN chmod +x /run-hadoop-job.sh
