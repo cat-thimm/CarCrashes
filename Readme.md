@@ -34,7 +34,10 @@ Add a folder in `/namenode/raw_data` and put the persons.csv file in it.
 
 The Dockerfile will start hadoop and execute the initial map reduce job using the python mapper.
 
+> cd namenode
+> 
 > docker build -t hadoop-job .
+> 
 > 
 > docker run -it hadoop-job
 

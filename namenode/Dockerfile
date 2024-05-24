@@ -1,4 +1,3 @@
-# Use an appropriate base image for Hadoop
 FROM amnrz/hadoop-namenode:v1
 
 RUN apt update
