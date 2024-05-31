@@ -20,9 +20,8 @@ else
 fi
 
 hadoop jar /opt/hadoop-3.2.1/share/hadoop/tools/lib/hadoop-streaming-3.2.1.jar \
-  -file /mapper.py \
+  -files /mapper.py,/reducer.py \
   -mapper "python3 mapper.py" \
-  -file /reducer.py \
   -reducer "python3 reducer.py" \
   -input /raw_data/persons.csv \
   -output /output

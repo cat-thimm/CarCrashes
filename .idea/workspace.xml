@@ -6,17 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="28dbcf8a-54b4-410a-994d-4f9ea053a098" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/Readme.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/datanode/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/datanode/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/namenode/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/namenode/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/namenode/map-reduce/mapper.py" beforeDir="false" afterPath="$PROJECT_DIR$/namenode/map-reduce/mapper.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/namenode/map-reduce/mapper_output.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/namenode/map-reduce/reducer_output.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/namenode/map-reduce/sample.csv" beforeDir="false" afterPath="$PROJECT_DIR$/namenode/map-reduce/sample.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/namenode/map-reduce/mapper_output.json" beforeDir="false" afterPath="$PROJECT_DIR$/namenode/map-reduce/mapper_output.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/namenode/map-reduce/reducer_output.json" beforeDir="false" afterPath="$PROJECT_DIR$/namenode/map-reduce/reducer_output.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/namenode/run-hadoop-job.sh" beforeDir="false" afterPath="$PROJECT_DIR$/namenode/run-hadoop-job.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nodemanager/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/nodemanager/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resourcemanager/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/resourcemanager/Dockerfile" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -170,7 +163,7 @@
       <workItem from="1716373395038" duration="1213000" />
       <workItem from="1716375890174" duration="8000" />
       <workItem from="1716377374898" duration="10954000" />
-      <workItem from="1717140416358" duration="6750000" />
+      <workItem from="1717140416358" duration="9753000" />
     </task>
     <servers />
   </component>
