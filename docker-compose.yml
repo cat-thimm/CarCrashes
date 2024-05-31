@@ -32,7 +32,6 @@ services:
       context: ./
       dockerfile: ./namenode/Dockerfile
     container_name: namenode
-    restart: always
     ports:
       - 9870:9870
       - 9000:9000
@@ -91,7 +90,7 @@ services:
     platform: linux/amd64
 
   historyserver:
-    image: bde2020/hadoop-historyserver:2.0.0-hadoop3.2.1-java8
+    image: arminzolfagharid/hadoop-historyserver:v2-hadoop3.2.1
     container_name: historyserver
     restart: always
     environment:

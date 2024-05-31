@@ -6,9 +6,17 @@
   <component name="ChangeListManager">
     <list default="true" id="28dbcf8a-54b4-410a-994d-4f9ea053a098" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/Readme.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/datanode/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/datanode/Dockerfile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/namenode/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/namenode/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/namenode/map-reduce/mapper.py" beforeDir="false" afterPath="$PROJECT_DIR$/namenode/map-reduce/mapper.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/namenode/map-reduce/mapper_output.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/namenode/map-reduce/reducer_output.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/namenode/map-reduce/sample.csv" beforeDir="false" afterPath="$PROJECT_DIR$/namenode/map-reduce/sample.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/namenode/run-hadoop-job.sh" beforeDir="false" afterPath="$PROJECT_DIR$/namenode/run-hadoop-job.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nodemanager/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/nodemanager/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resourcemanager/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/resourcemanager/Dockerfile" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,41 +55,46 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Docker.Dockerfile.executor&quot;: &quot;Run&quot;,
-    &quot;Docker.datanode/Dockerfile.executor&quot;: &quot;Run&quot;,
-    &quot;Docker.namenode/Dockerfile.executor&quot;: &quot;Run&quot;,
-    &quot;Makefile Target.build.executor&quot;: &quot;Run&quot;,
-    &quot;Maven.CarCrashes [clean].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.CarCrashes [install].executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.go.formatter.settings.were.checked&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.go.migrated.go.modules.settings&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;go.import.settings.migrated&quot;: &quot;true&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Docker.Dockerfile.executor": "Run",
+    "Docker.datanode/Dockerfile.executor": "Run",
+    "Docker.namenode/Dockerfile.executor": "Run",
+    "Makefile Target.build.executor": "Run",
+    "Maven.CarCrashes [clean].executor": "Run",
+    "Maven.CarCrashes [install].executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.go.formatter.settings.were.checked": "true",
+    "RunOnceActivity.go.migrated.go.modules.settings": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "main",
+    "go.import.settings.migrated": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/Cati/Documents/GitHub/CarCrashes/namenode/map-reduce",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Cati\Documents\GitHub\CarCrashes\namenode\map-reduce" />
+      <recent name="C:\Users\Cati\Documents\GitHub\CarCrashes\namenode\raw_data" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Cati\Documents\GitHub\CarCrashes\namenode\raw_data" />
+      <recent name="C:\Users\Cati\Documents\GitHub\CarCrashes\namenode\map-reduce" />
       <recent name="C:\Users\Cati\Documents\GitHub\CarCrashes\namenode" />
       <recent name="$PROJECT_DIR$/namenode" />
       <recent name="C:\Users\Cati\Documents\GitHub\CarCrashes\main\notebook" />
-      <recent name="$PROJECT_DIR$" />
-      <recent name="$PROJECT_DIR$/raw_data" />
     </key>
   </component>
   <component name="RunAnythingCache">
@@ -138,6 +151,7 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
+        <option value="bundled-jdk-9f38398b9061-39b83d9b5494-intellij.indexing.shared.core-IU-241.15989.150" />
         <option value="bundled-js-predefined-1d06a55b98c1-91d5c284f522-JavaScript-IU-241.15989.150" />
       </set>
     </attachedChunks>
@@ -156,6 +170,7 @@
       <workItem from="1716373395038" duration="1213000" />
       <workItem from="1716375890174" duration="8000" />
       <workItem from="1716377374898" duration="10954000" />
+      <workItem from="1717140416358" duration="6750000" />
     </task>
     <servers />
   </component>

@@ -17,11 +17,13 @@ Big Data Evaluation of car crashes in New York City.
 Add a folder in `/namenode/raw_data` and put the persons.csv file in it.
 
 ## Start MongoDB, Hadoop and Jupyter
-- docker-compose build --no-cache
-- docker-compose up -d
+- `docker-compose build --no-cache`
+- `docker-compose up -d`
+- `docker-compose exec namenode sh`
+- `sh run-hadoop-job.sh`
 
 ## Stop MongoDB, Hadoop and Jupyter
-- docker-compose stop/down
+- `docker-compose stop/down -v`
 
 ## Mongo Shell
 `docker ps` -> Get mongo container id (e.g. e88256aaf0df)
@@ -30,23 +32,12 @@ Add a folder in `/namenode/raw_data` and put the persons.csv file in it.
 
 `mongo mongodb://localhost:27017 -u root -p letmein`
 
-## Start Dockerfile 
-
-The Dockerfile will start hadoop and execute the initial map reduce job using the python mapper.
-
-> cd namenode
-> 
-> docker build -t hadoop-job .
-> 
-> 
-> docker run -it hadoop-job
-
 
 ### Testing mapper and reducer
 
 Open up a console and check the following commands:
 
->`cd main`
+>`cd namenode`
 > 
 > `cat sample.csv | python mapper.py > mapper_output.json`
 > 
