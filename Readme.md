@@ -21,6 +21,10 @@ Add a folder in `/namenode/raw_data` and put the persons.csv file in it.
 - `docker-compose up -d`
 - `docker-compose exec namenode sh`
 - `sh run-hadoop-job.sh`
+- See the reults by ``hdfs dfs -cat /output/part-00000``
+
+### In case of "Hadoop is in Safe Mode" Error
+`hdfs dfsadmin -safemode leave`
 
 ## Stop MongoDB, Hadoop and Jupyter
 - `docker-compose stop/down -v`
@@ -38,6 +42,8 @@ Add a folder in `/namenode/raw_data` and put the persons.csv file in it.
 Open up a console and check the following commands:
 
 >`cd namenode`
+> 
+> ``cd map-reduce``
 > 
 > `cat sample.csv | python mapper.py > mapper_output.json`
 > 

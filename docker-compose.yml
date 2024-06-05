@@ -19,13 +19,14 @@ services:
       ME_CONFIG_MONGODB_URL: mongodb://root:letmein@mongo:27017/
       ME_CONFIG_BASICAUTH: false
 
-  jupyter:
-    image: dbsfdit/jupyter:2023.ss
-    container_name: dbsfdit-jupyter
-    ports:
-      - "5678:8888"
-    volumes:
-      - ../namenode/map-reduce:/home/jovyan/map-reduce
+  # Only for writing new python code
+  #jupyter:
+  #  image: dbsfdit/jupyter:2023.ss
+  #  container_name: dbsfdit-jupyter
+  #  ports:
+  #    - "5678:8888"
+  #   volumes:
+  #     - ../namenode/map-reduce:/home/jovyan/map-reduce
 
   namenode:
     build:
@@ -90,7 +91,9 @@ services:
     platform: linux/amd64
 
   historyserver:
-    image: arminzolfagharid/hadoop-historyserver:v2-hadoop3.2.1
+    build:
+      context: ./
+      dockerfile: ./historyserver/Dockerfile
     container_name: historyserver
     restart: always
     environment:
@@ -104,7 +107,7 @@ services:
     platform: linux/amd64
 
 volumes:
-  data: {}
+  data: { }
   hadoop_namenode:
   hadoop_datanode:
   hadoop_historyserver:

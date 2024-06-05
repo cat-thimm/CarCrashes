@@ -2,6 +2,9 @@
 #set -e
 #set -x
 
+# Leave safe mode
+hdfs dfsadmin -safemode leave
+
 # delete output directory
 hdfs dfs -rm -r /output
 
@@ -29,6 +32,8 @@ hadoop jar /opt/hadoop-3.2.1/share/hadoop/tools/lib/hadoop-streaming-3.2.1.jar \
 # Check if the job completed successfully and the output directory exists
 if hadoop fs -test -e /output; then
   echo "Hadoop streaming job completed successfully."
+  hadoop fs -get /output /output # safe on container for debugging
 else
   echo "Hadoop streaming job failed."
 fi
+

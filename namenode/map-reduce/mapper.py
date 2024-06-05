@@ -1,24 +1,57 @@
 #!/usr/bin/env python
-# -*-coding:utf-8 -*
 
 import sys
-import csv
 import json
 
-# Read CSV rows from stdin and emit JSON objects
-csv_reader = csv.DictReader(sys.stdin)
-for row in csv_reader:
-    # Transform CSV row to JSON object
-    json_obj = {
-        'COLLISION_ID': row['COLLISION_ID'] if 'COLLISION_ID' in row else '',
-        'EMOTIONAL_STATUS': row['EMOTIONAL_STATUS'] if 'EMOTIONAL_STATUS' in row else '',
-        'BODILY_INJURY': row['BODILY_INJURY'] if 'BODILY_INJURY' in row else '',
-        'PERSON_TYPE': row['PERSON_TYPE'] if 'PERSON_TYPE' in row else '',
-        'PERSON_AGE': row['PERSON_AGE'] if 'PERSON_AGE' in row else '',
-        'PERSON_SEX': row['PERSON_SEX'] if 'PERSON_SEX' in row else '',
-        'SAFETY_EQUIPMENT': row['SAFETY_EQUIPMENT'] if 'SAFETY_EQUIPMENT' in row else ''
-    }
-    # Emit JSON object
-    print(json.dumps(json_obj))
 
+for line in sys.stdin:
+    fields = line.strip().split(',')
 
+    if len(fields) >= 22:
+        unique_id = fields[0]
+        collision_id = fields[1]
+        crash_date = fields[2]
+        crash_time = fields[3]
+        person_id = fields[4]
+        person_type = fields[5]
+        person_injury = fields[6]
+        vehicle_id = fields[7]
+        person_age = fields[8]
+        ejection = fields[9]
+        emotional_status = fields[10]
+        bodily_injury = fields[11]
+        position_in_vehicle = fields[12]
+        safety_equipment = fields[13]
+        ped_location = fields[14]
+        ped_action = fields[15]
+        complaint = fields[16]
+        ped_role = fields[17]
+        contributing_factor_1 = fields[18]
+        contributing_factor_2 = fields[19]
+        person_sex = fields[20]
+
+        json_object = {
+            "unique_id": unique_id,
+            "collision_id": collision_id,
+            "crash_date": crash_date,
+            "crash_time": crash_time,
+            "person_id": person_id,
+            "person_type": person_type,
+            "person_injury": person_injury,
+            "vehicle_id": vehicle_id,
+            "person_age": person_age,
+            "ejection": ejection,
+            "emotional_status": emotional_status,
+            "bodily_injury": bodily_injury,
+            "position_in_vehicle": position_in_vehicle,
+            "safety_equipment": safety_equipment,
+            "ped_location": ped_location,
+            "ped_action": ped_action,
+            "complaint": complaint,
+            "ped_role": ped_role,
+            "contributing_factor_1": contributing_factor_1,
+            "contributing_factor_2": contributing_factor_2,
+            "person_sex": person_sex
+        }
+
+        print(json.dumps(json_object))
