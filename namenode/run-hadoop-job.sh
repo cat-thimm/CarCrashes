@@ -15,19 +15,19 @@ hdfs dfs -rm -r /output
 hadoop fs -mkdir -p /raw_data
 
 # Check if persons.csv exists in HDFS and only put it if it does not exist
-if hadoop fs -test -e /raw_data/persons.csv; then
+if hadoop fs -test -e usr/raw_data/persons.csv; then
   echo "persons.csv already exists in HDFS, skipping upload."
 else
   echo "persons.csv does not exist in HDFS, uploading."
-  hdfs dfs -put /raw_data/persons.csv /raw_data
+  hdfs dfs -put usr/raw_data/persons.csv /raw_data
 fi
 
-hadoop jar /opt/hadoop-3.2.1/share/hadoop/tools/lib/hadoop-streaming-3.2.1.jar \
-  -files /mapper.py,/reducer.py \
-  -mapper "python3 mapper.py" \
-  -reducer "python3 reducer.py" \
-  -input /raw_data/persons.csv \
-  -output /output
+hadoop jar share/hadoop/tools/lib/hadoop-streaming-3.3.6.jar \
+  -files usr/mapper.py,usr/reducer.py \
+  -mapper  mapper.py \
+  -reducer reducer.py \
+  -input raw_data/persons.csv \
+  -output usr/output
 
 # Check if the job completed successfully and the output directory exists
 if hadoop fs -test -e /output; then

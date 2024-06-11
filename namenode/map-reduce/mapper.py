@@ -1,13 +1,31 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 
 import sys
 import json
 
-
 for line in sys.stdin:
-    fields = line.strip().split(',')
+    def split_csv_line(line):
+        fields = []
+        field = ''
+        in_quotes = False
 
-    if len(fields) >= 22:
+        for char in line:
+            if char == ',' and not in_quotes:
+                fields.append(field)
+                field = ''
+            elif char == '"':
+                in_quotes = not in_quotes
+            else:
+                field += char
+
+        fields.append(field)
+
+        return fields
+
+
+    fields = split_csv_line(line.strip())
+
+    if len(fields) > 0:
         unique_id = fields[0]
         collision_id = fields[1]
         crash_date = fields[2]
@@ -53,5 +71,5 @@ for line in sys.stdin:
             "contributing_factor_2": contributing_factor_2,
             "person_sex": person_sex
         }
-
         print(json.dumps(json_object))
+

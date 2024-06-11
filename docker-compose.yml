@@ -1,110 +1,39 @@
+version: "2"
 services:
-  mongo:
-    image: mongo
-    restart: always
-    volumes:
-      - data:/data
-    environment:
-      MONGO_INITDB_ROOT_USERNAME: root
-      MONGO_INITDB_ROOT_PASSWORD: letmein
-
-  mongo-express:
-    image: mongo-express
-    restart: always
-    ports:
-      - 8081:8081
-    environment:
-      ME_CONFIG_MONGODB_ADMINUSERNAME: root
-      ME_CONFIG_MONGODB_ADMINPASSWORD: letmein
-      ME_CONFIG_MONGODB_URL: mongodb://root:letmein@mongo:27017/
-      ME_CONFIG_BASICAUTH: false
-
-  # Only for writing new python code
-  #jupyter:
-  #  image: dbsfdit/jupyter:2023.ss
-  #  container_name: dbsfdit-jupyter
-  #  ports:
-  #    - "5678:8888"
-  #   volumes:
-  #     - ../namenode/map-reduce:/home/jovyan/map-reduce
-
-  namenode:
-    build:
-      context: ./
-      dockerfile: ./namenode/Dockerfile
-    container_name: namenode
-    ports:
-      - 9870:9870
-      - 9000:9000
-    volumes:
-      - hadoop_namenode:/hadoop/dfs/name
-    environment:
-      - CLUSTER_NAME=test
-    env_file:
-      - hadoop.env
-    networks:
-      - hadoop
-    platform: linux/amd64
-
-  datanode:
-    build:
-      context: ./
-      dockerfile: ./datanode/Dockerfile
-    container_name: datanode
-    restart: always
-    volumes:
-      - hadoop_datanode:/hadoop/dfs/data
-    environment:
-      SERVICE_PRECONDITION: "namenode:9870"
-    env_file:
-      - hadoop.env
-    networks:
-      - hadoop
-    platform: linux/amd64
-
-  resourcemanager:
-    build:
-      context: ./
-      dockerfile: ./resourcemanager/Dockerfile
-    container_name: resourcemanager
-    restart: always
-    environment:
-      SERVICE_PRECONDITION: "namenode:9000 namenode:9870 datanode:9864"
-    env_file:
-      - hadoop.env
-    networks:
-      - hadoop
-    platform: linux/amd64
-
-  nodemanager1:
-    build:
-      context: ./
-      dockerfile: ./nodemanager/Dockerfile
-    container_name: nodemanager
-    restart: always
-    environment:
-      SERVICE_PRECONDITION: "namenode:9000 namenode:9870 datanode:9864 resourcemanager:8088"
-    env_file:
-      - hadoop.env
-    networks:
-      - hadoop
-    platform: linux/amd64
-
-  historyserver:
-    build:
-      context: ./
-      dockerfile: ./historyserver/Dockerfile
-    container_name: historyserver
-    restart: always
-    environment:
-      SERVICE_PRECONDITION: "namenode:9000 namenode:9870 datanode:9864 resourcemanager:8088"
-    volumes:
-      - hadoop_historyserver:/hadoop/yarn/timeline
-    env_file:
-      - hadoop.env
-    networks:
-      - hadoop
-    platform: linux/amd64
+   namenode:
+      build:
+        context: ./
+        dockerfile: ./namenode/Dockerfile
+      hostname: namenode
+      command: ["hdfs", "namenode"]
+      ports:
+        - 9870:9870
+      env_file:
+        - ./hadoop.env
+      environment:
+          ENSURE_NAMENODE_DIR: "/tmp/hadoop-root/dfs/name"
+      volumes:
+        - hadoop_namenode:/data
+   datanode:
+      image: apache/hadoop:3
+      command: ["hdfs", "datanode"]
+      env_file:
+        - ./hadoop.env
+   resourcemanager:
+      image: apache/hadoop:3
+      hostname: resourcemanager
+      command: ["yarn", "resourcemanager"]
+      ports:
+         - 8088:8088
+      env_file:
+        - ./hadoop.env
+      volumes:
+        - ./test.sh:/opt/test.sh
+   nodemanager:
+      image: apache/hadoop:3
+      command: ["yarn", "nodemanager"]
+      env_file:
+        - ./hadoop.env
 
 volumes:
   data: { }
@@ -112,6 +41,122 @@ volumes:
   hadoop_datanode:
   hadoop_historyserver:
 
-networks:
-  hadoop:
-    driver: bridge
+#services:
+#  mongo:
+#    image: mongo
+#    restart: always
+#    volumes:
+#      - data:/data
+#    environment:
+#      MONGO_INITDB_ROOT_USERNAME: root
+#      MONGO_INITDB_ROOT_PASSWORD: letmein
+#
+#  mongo-express:
+#    image: mongo-express
+#    restart: always
+#    ports:
+#      - 8081:8081
+#    environment:
+#      ME_CONFIG_MONGODB_ADMINUSERNAME: root
+#      ME_CONFIG_MONGODB_ADMINPASSWORD: letmein
+#      ME_CONFIG_MONGODB_URL: mongodb://root:letmein@mongo:27017/
+#      ME_CONFIG_BASICAUTH: false
+#
+#  # Only for writing new python code
+#  #jupyter:
+#  #  image: dbsfdit/jupyter:2023.ss
+#  #  container_name: dbsfdit-jupyter
+#  #  ports:
+#  #    - "5678:8888"
+#  #   volumes:
+#  #     - ../namenode/map-reduce:/home/jovyan/map-reduce
+#
+#  namenode:
+#    build:
+#      context: ./
+#      dockerfile: ./namenode/Dockerfile
+#    hostname: namenode
+#    container_name: namenode
+#    command: ["hdfs", "namenode"]
+#    ports:
+#      - 9870:9870
+#      - 9000:9000
+#    volumes:
+#      - hadoop_namenode:/hadoop/dfs/name
+#    environment:
+#      ENSURE_NAMENODE_DIR: "/tmp/hadoop-root/dfs/name"
+#    env_file:
+#      - hadoop.env
+#    networks:
+#      - hadoop
+#    platform: linux/amd64
+#
+#  datanode:
+#    build:
+#      context: ./
+#      dockerfile: ./datanode/Dockerfile
+#    container_name: datanode
+#    restart: always
+#    volumes:
+#      - hadoop_datanode:/hadoop/dfs/data
+#    environment:
+#      SERVICE_PRECONDITION: "namenode:9870"
+#    env_file:
+#      - hadoop.env
+#    networks:
+#      - hadoop
+#    platform: linux/amd64
+#
+#  resourcemanager:
+#    build:
+#      context: ./
+#      dockerfile: ./resourcemanager/Dockerfile
+#    container_name: resourcemanager
+#    restart: always
+#    environment:
+#      SERVICE_PRECONDITION: "namenode:9000 namenode:9870 datanode:9864"
+#    env_file:
+#      - hadoop.env
+#    networks:
+#      - hadoop
+#    platform: linux/amd64
+#
+#  nodemanager1:
+#    build:
+#      context: ./
+#      dockerfile: ./nodemanager/Dockerfile
+#    container_name: nodemanager
+#    restart: always
+#    environment:
+#      SERVICE_PRECONDITION: "namenode:9000 namenode:9870 datanode:9864 resourcemanager:8088"
+#    env_file:
+#      - hadoop.env
+#    networks:
+#      - hadoop
+#    platform: linux/amd64
+#
+#  historyserver:
+#    build:
+#      context: ./
+#      dockerfile: ./historyserver/Dockerfile
+#    container_name: historyserver
+#    restart: always
+#    environment:
+#      SERVICE_PRECONDITION: "namenode:9000 namenode:9870 datanode:9864 resourcemanager:8088"
+#    volumes:
+#      - hadoop_historyserver:/hadoop/yarn/timeline
+#    env_file:
+#      - hadoop.env
+#    networks:
+#      - hadoop
+#    platform: linux/amd64
+#
+#volumes:
+#  data: { }
+#  hadoop_namenode:
+#  hadoop_datanode:
+#  hadoop_historyserver:
+#
+#networks:
+#  hadoop:
+#    driver: bridge
