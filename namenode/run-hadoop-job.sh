@@ -22,12 +22,21 @@ else
   hdfs dfs -put /raw_data/persons.csv /raw_data
 fi
 
-hadoop jar /opt/hadoop-3.2.1/share/hadoop/tools/lib/hadoop-streaming-3.2.1.jar \
-  -files /mapper.py,/reducer.py \
-  -mapper "python3 mapper.py" \
-  -reducer "python3 reducer.py" \
-  -input /raw_data/persons.csv \
-  -output /output
+if hadoop fs -test -e /raw_data/crashes.csv; then
+  echo "crashes.csv already exists in HDFS, skipping upload."
+else
+  echo "crashes.csv does not exist in HDFS, uploading."
+  hdfs dfs -put /raw_data/crashes.csv /raw_data
+fi
+
+hadoop jar /snapshot.jar org.cthimm.CC_Runner /raw_data/crashes.csv /raw_data/persons.csv /output
+
+#hadoop jar /opt/hadoop-3.2.1/share/hadoop/tools/lib/hadoop-streaming-3.2.1.jar \
+#  -files /mapper.py,/reducer.py \
+#  -mapper "python3 mapper.py" \
+#  -reducer "python3 reducer.py" \
+#  -input /raw_data/persons.csv \
+#  -output /output
 
 # Check if the job completed successfully and the output directory exists
 if hadoop fs -test -e /output; then

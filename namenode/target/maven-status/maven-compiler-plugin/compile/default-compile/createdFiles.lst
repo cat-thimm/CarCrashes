@@ -1,0 +1,8 @@
+org\cthimm\TestCC_MapperReducer.class
+org\cthimm\CC_Mapper_Persons.class
+org\cthimm\CC_Runner.class
+org\cthimm\TestCC_MapperReducer$1.class
+org\cthimm\CC_Partitioner.class
+org\cthimm\CC_Reducer.class
+org\cthimm\CC_Mapper_Crashes.class
+org\cthimm\TestCC_MapperReducer$2.class

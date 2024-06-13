@@ -5,16 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="28dbcf8a-54b4-410a-994d-4f9ea053a098" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/historyserver/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/namenode/src/main/java/org/cthimm/CC_Mapper_Crashes.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/namenode/src/main/java/org/cthimm/CC_Partitioner.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/namenode/src/main/java/org/cthimm/TestCC_MapperReducer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/Readme.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/datanode/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/datanode/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/historyserver/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/historyserver/Dockerfile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/namenode/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/namenode/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/namenode/map-reduce/mapper.py" beforeDir="false" afterPath="$PROJECT_DIR$/namenode/map-reduce/mapper.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/namenode/map-reduce/mapper_output.json" beforeDir="false" afterPath="$PROJECT_DIR$/namenode/map-reduce/mapper_output.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/namenode/map-reduce/reducer.py" beforeDir="false" afterPath="$PROJECT_DIR$/namenode/map-reduce/reducer.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/namenode/map-reduce/reducer_output.json" beforeDir="false" afterPath="$PROJECT_DIR$/namenode/map-reduce/reducer_output.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/namenode/run-hadoop-job.sh" beforeDir="false" afterPath="$PROJECT_DIR$/namenode/run-hadoop-job.sh" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/nodemanager/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/nodemanager/Dockerfile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resourcemanager/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/resourcemanager/Dockerfile" afterDir="false" />
@@ -73,7 +70,7 @@
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;go.import.settings.migrated&quot;: &quot;true&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Cati/Documents/GitHub/CarCrashes/namenode/map-reduce&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Cati/Documents/GitHub/attention-recognition&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -81,7 +78,8 @@
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
     &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
@@ -91,11 +89,11 @@
       <recent name="C:\Users\Cati\Documents\GitHub\CarCrashes\namenode\raw_data" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Cati\Documents\GitHub\CarCrashes\namenode\src\main\java" />
       <recent name="C:\Users\Cati\Documents\GitHub\CarCrashes\namenode\raw_data" />
       <recent name="C:\Users\Cati\Documents\GitHub\CarCrashes\namenode\map-reduce" />
       <recent name="C:\Users\Cati\Documents\GitHub\CarCrashes\namenode" />
       <recent name="$PROJECT_DIR$/namenode" />
-      <recent name="C:\Users\Cati\Documents\GitHub\CarCrashes\main\notebook" />
     </key>
   </component>
   <component name="RunAnythingCache">
@@ -172,7 +170,13 @@
       <workItem from="1716375890174" duration="8000" />
       <workItem from="1716377374898" duration="10954000" />
       <workItem from="1717140416358" duration="10581000" />
-      <workItem from="1717496256653" duration="13907000" />
+      <workItem from="1717496256653" duration="17480000" />
+      <workItem from="1717588927125" duration="1474000" />
+      <workItem from="1717590435033" duration="9604000" />
+      <workItem from="1718092297002" duration="2013000" />
+      <workItem from="1718094976092" duration="4069000" />
+      <workItem from="1718108247064" duration="16000" />
+      <workItem from="1718271140112" duration="587000" />
     </task>
     <servers />
   </component>
