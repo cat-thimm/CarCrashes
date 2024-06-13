@@ -36,8 +36,8 @@ public class CC_Mapper_Crashes extends MapReduceBase implements Mapper<LongWrita
             String latitude = fields[LATITUDE_INDEX];
             String longitude = fields[LONGITUDE_INDEX];
             String location = fields[LOCATION_INDEX];
-            String onStreetName = fields[ON_STREET_NAME_INDEX];
-            String offStreetName = fields[OFF_STREET_NAME_INDEX];
+            String onStreetName = fields[ON_STREET_NAME_INDEX].replaceAll("\\s+","");
+            String offStreetName = fields[OFF_STREET_NAME_INDEX].replaceAll("\\s+","");
             String vehicleTypeCode1 = fields[VEHICLE_TYPE_CODE_1_INDEX];
             String vehicleTypeCode2 = fields[VEHICLE_TYPE_CODE_2_INDEX];
 
@@ -52,12 +52,12 @@ public class CC_Mapper_Crashes extends MapReduceBase implements Mapper<LongWrita
                     "\"longitude\":\"" + longitude + "\"," +
                     "\"location\":\"" + location + "\"" +
                     "\"on_street_name\":\"" + onStreetName + "\"" +
-                    "\"off_street_name\":\"" + offStreetName + "\"" +
+                    "\"off_street_name\":\"" + offStreetName+ "\"" +
                     "\"vehicle_type_code_1\":\"" + vehicleTypeCode1 + "\"" +
                     "\"vehicle_type_code_2\":\"" + vehicleTypeCode2 + "\"" +
                     "}";
 
-            output.collect(new Text(collisionId + "#file2"), new Text(jsonObject));
+            output.collect(new Text(collisionId), new Text(jsonObject));
         }
     }
 

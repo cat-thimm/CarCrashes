@@ -5,16 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="28dbcf8a-54b4-410a-994d-4f9ea053a098" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/namenode/src/main/java/org/cthimm/CC_Mapper_Crashes.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/namenode/src/main/java/org/cthimm/CC_Partitioner.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/namenode/src/main/java/org/cthimm/TestCC_MapperReducer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/datanode/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/datanode/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/historyserver/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/historyserver/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/namenode/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/namenode/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/namenode/run-hadoop-job.sh" beforeDir="false" afterPath="$PROJECT_DIR$/namenode/run-hadoop-job.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nodemanager/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/nodemanager/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resourcemanager/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/resourcemanager/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/namenode/src/main/java/org/cthimm/CC_Mapper_Crashes.java" beforeDir="false" afterPath="$PROJECT_DIR$/namenode/src/main/java/org/cthimm/CC_Mapper_Crashes.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/namenode/src/main/java/org/cthimm/CC_Mapper_Persons.java" beforeDir="false" afterPath="$PROJECT_DIR$/namenode/src/main/java/org/cthimm/CC_Mapper_Persons.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/namenode/src/main/java/org/cthimm/CC_Reducer.java" beforeDir="false" afterPath="$PROJECT_DIR$/namenode/src/main/java/org/cthimm/CC_Reducer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/namenode/target/CarCrashes-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/namenode/target/CarCrashes-1.0-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/namenode/target/classes/org/cthimm/CC_Mapper_Crashes.class" beforeDir="false" afterPath="$PROJECT_DIR$/namenode/target/classes/org/cthimm/CC_Mapper_Crashes.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/namenode/target/classes/org/cthimm/CC_Mapper_Persons.class" beforeDir="false" afterPath="$PROJECT_DIR$/namenode/target/classes/org/cthimm/CC_Mapper_Persons.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/namenode/target/classes/org/cthimm/CC_Partitioner.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/namenode/target/classes/org/cthimm/CC_Reducer.class" beforeDir="false" afterPath="$PROJECT_DIR$/namenode/target/classes/org/cthimm/CC_Reducer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/namenode/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/namenode/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/namenode/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/namenode/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

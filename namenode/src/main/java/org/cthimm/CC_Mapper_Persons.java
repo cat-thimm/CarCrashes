@@ -26,7 +26,6 @@ public class CC_Mapper_Persons extends MapReduceBase implements Mapper<LongWrita
         String[] fields = parseCSVLine(line);
 
         if (fields.length >= 20) {
-            String uniqueId = fields[0];
             String collisionId = fields[1];
             String personType = fields[5];
             String personAge = fields[8];
@@ -39,7 +38,6 @@ public class CC_Mapper_Persons extends MapReduceBase implements Mapper<LongWrita
             if (isValidAge(personAge)) {
                 // Construct JSON object
                 String jsonObject = "{" +
-                        "\"collision_id\":\"" + collisionId + "\"," +
                         "\"type\":\"" + personType + "\"," +
                         "\"age\":\"" + personAge + "\"," +
                         "\"emotional_status\":\"" + emotionalStatus + "\"," +
@@ -49,7 +47,7 @@ public class CC_Mapper_Persons extends MapReduceBase implements Mapper<LongWrita
                         "}";
 
                 // Output uniqueId as key and JSON object as value
-                output.collect(new Text(uniqueId + "#file1"), new Text(jsonObject));
+                output.collect(new Text(collisionId), new Text(jsonObject));
             }
         }
     }
