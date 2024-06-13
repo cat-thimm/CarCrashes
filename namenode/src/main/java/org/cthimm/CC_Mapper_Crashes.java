@@ -50,7 +50,6 @@ public class CC_Mapper_Crashes extends MapReduceBase implements Mapper<LongWrita
                     "\"zip_code\":\"" + zipCode + "\"," +
                     "\"latitude\":\"" + latitude + "\"," +
                     "\"longitude\":\"" + longitude + "\"," +
-                    "\"location\":\"" + location + "\"" +
                     "\"on_street_name\":\"" + onStreetName + "\"" +
                     "\"off_street_name\":\"" + offStreetName+ "\"" +
                     "\"vehicle_type_code_1\":\"" + vehicleTypeCode1 + "\"" +
