@@ -33,8 +33,6 @@ public class CC_Mapper_Crashes extends MapReduceBase implements Mapper<LongWrita
             String crashTime = fields[CRASH_TIME_INDEX];
             String borough = fields[BOROUGH_INDEX];
             String zipCode = fields[ZIP_CODE_INDEX];
-            String latitude = fields[LATITUDE_INDEX];
-            String longitude = fields[LONGITUDE_INDEX];
             String location = fields[LOCATION_INDEX];
             String onStreetName = fields[ON_STREET_NAME_INDEX].replaceAll("\\s+","");
             String offStreetName = fields[OFF_STREET_NAME_INDEX].replaceAll("\\s+","");
@@ -48,8 +46,7 @@ public class CC_Mapper_Crashes extends MapReduceBase implements Mapper<LongWrita
                     "\"crash_time\":\"" + crashTime + "\"," +
                     "\"borough\":\"" + borough + "\"," +
                     "\"zip_code\":\"" + zipCode + "\"," +
-                    "\"latitude\":\"" + latitude + "\"," +
-                    "\"longitude\":\"" + longitude + "\"," +
+                    "\"location\":\"" + location + "\"" +
                     "\"on_street_name\":\"" + onStreetName + "\"" +
                     "\"off_street_name\":\"" + offStreetName+ "\"" +
                     "\"vehicle_type_code_1\":\"" + vehicleTypeCode1 + "\"" +

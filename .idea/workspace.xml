@@ -4,25 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="28dbcf8a-54b4-410a-994d-4f9ea053a098" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Makefile" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/Readme.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/namenode/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/namenode/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/namenode/map-reduce/.ipynb_checkpoints/main-checkpoint.ipynb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/namenode/map-reduce/.ipynb_checkpoints/mapper-checkpoint.ipynb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/namenode/map-reduce/.ipynb_checkpoints/reducer-checkpoint.ipynb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/namenode/map-reduce/mapper.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/namenode/map-reduce/mapper_output.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/namenode/map-reduce/notebook/main.ipynb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/namenode/map-reduce/notebook/mapper.ipynb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/namenode/map-reduce/notebook/reducer.ipynb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/namenode/map-reduce/reducer.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/namenode/map-reduce/reducer_output.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/namenode/map-reduce/sample.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/namenode/target/CarCrashes-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/namenode/target/CarCrashes-1.0-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/namenode/target/classes/org/cthimm/CC_Mapper_Crashes.class" beforeDir="false" afterPath="$PROJECT_DIR$/namenode/target/classes/org/cthimm/CC_Mapper_Crashes.class" afterDir="false" />
-    </list>
+    <list default="true" id="28dbcf8a-54b4-410a-994d-4f9ea053a098" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -183,7 +165,7 @@
       <workItem from="1718092297002" duration="2013000" />
       <workItem from="1718094976092" duration="4069000" />
       <workItem from="1718108247064" duration="16000" />
-      <workItem from="1718271140112" duration="672000" />
+      <workItem from="1718271140112" duration="1164000" />
     </task>
     <servers />
   </component>
