@@ -14,7 +14,11 @@ Big Data Evaluation of car crashes in New York City.
 
 ## Add Raw Data
 
-Add a folder in `/namenode/raw_data` and put the persons.csv file in it.
+Add a folder in `/namenode/raw_data` and put the persons.csv and crashes.csv file in it.
+
+## Build maven project
+
+Go to ``namenode``. Here run `mvn clean install`. It generates a new JAR to be executed for the MapReduce Job.
 
 ## Start MongoDB, Hadoop and Jupyter
 - `docker-compose build --no-cache`
@@ -36,21 +40,4 @@ Add a folder in `/namenode/raw_data` and put the persons.csv file in it.
 
 `mongo mongodb://localhost:27017 -u root -p letmein`
 
-
-### Testing mapper and reducer
-
-Open up a console and check the following commands:
-
->`cd namenode`
-> 
-> ``cd map-reduce``
-> 
-> `cat sample.csv | python mapper.py > mapper_output.json`
-> 
-> `cat mapper_output.json | python reducer.py > reducer_output.json`
-
-It should generate the reducer_output.json in the following style:
-
-``[{"COLLISION_ID": "1", "EMOTIONAL_STATUS": "calm", "BODILY_INJURY": "none", "PERSON_TYPE": "driver", "PERSON_AGE": "30", "PERSON_SEX": "M", "SAFETY_EQUIPMENT": "seatbelt"}, {"COLLISION_ID": "2", "EMOTIONAL_STATUS": "angry", "BODILY_INJURY": "minor", "PERSON_TYPE": "passenger", "PERSON_AGE": "25", "PERSON_SEX": "F", "SAFETY_EQUIPMENT": "airbag"}]
-``
 
