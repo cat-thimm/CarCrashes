@@ -2,3 +2,5 @@ namenode/raw_data/*
 !namenode/raw_data/
 .idea
 debug
+data.json
+test.json

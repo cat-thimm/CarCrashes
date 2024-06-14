@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
 import org.apache.hadoop.io.LongWritable;
 import org.apache.hadoop.io.Text;
 import org.apache.hadoop.mapred.MapReduceBase;
@@ -13,6 +14,7 @@ import org.apache.hadoop.mapred.Reporter;
 
 public class CC_Mapper_Persons extends MapReduceBase implements Mapper<LongWritable, Text, Text, Text> {
     private static final int HEADER_LINE_INDEX = 0; // Index of the header line (assuming it's the first line)
+    private final ObjectMapper objectMapper = new ObjectMapper();
 
     public void map(LongWritable key, Text value, OutputCollector<Text, Text> output,
                     Reporter reporter) throws IOException {
@@ -36,18 +38,10 @@ public class CC_Mapper_Persons extends MapReduceBase implements Mapper<LongWrita
 
             // Data Cleaning: Check person's age between 0 and 125
             if (isValidAge(personAge)) {
-                // Construct JSON object
-                String jsonObject = "{" +
-                        "\"type\":\"" + personType + "\"," +
-                        "\"age\":\"" + personAge + "\"," +
-                        "\"emotional_status\":\"" + emotionalStatus + "\"," +
-                        "\"bodily_injury\":\"" + bodilyInjury + "\"," +
-                        "\"safety_equipment\":\"" + safetyEquipment + "\"," +
-                        "\"gender\":\"" + personGender + "\"" +
-                        "}";
 
-                // Output uniqueId as key and JSON object as value
-                output.collect(new Text(collisionId), new Text(jsonObject));
+                // Output uniqueId as key and Person obj as value
+                Person v = new Person(personType, personAge, emotionalStatus, bodilyInjury, safetyEquipment, personGender);
+                output.collect(new Text(collisionId), new Text(objectMapper.writeValueAsString(v)));
             }
         }
     }

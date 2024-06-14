@@ -1,7 +1,9 @@
-org\cthimm\TestCC_MapperReducer.class
+org\cthimm\JsonOutputFormat$JsonRecordWriter.class
 org\cthimm\CC_Mapper_Persons.class
 org\cthimm\CC_Runner.class
-org\cthimm\TestCC_MapperReducer$1.class
 org\cthimm\CC_Reducer.class
+org\cthimm\Test.class
 org\cthimm\CC_Mapper_Crashes.class
-org\cthimm\TestCC_MapperReducer$2.class
+org\cthimm\Person.class
+org\cthimm\Crashes.class
+org\cthimm\JsonOutputFormat.class

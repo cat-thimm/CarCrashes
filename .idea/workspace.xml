@@ -4,7 +4,30 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="28dbcf8a-54b4-410a-994d-4f9ea053a098" name="Changes" comment="" />
+    <list default="true" id="28dbcf8a-54b4-410a-994d-4f9ea053a098" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/core-site.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/namenode/src/main/java/org/cthimm/Crashes.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/namenode/src/main/java/org/cthimm/JsonOutputFormat.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/namenode/src/main/java/org/cthimm/Person.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/namenode/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/namenode/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/namenode/run-hadoop-job.sh" beforeDir="false" afterPath="$PROJECT_DIR$/namenode/run-hadoop-job.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/namenode/src/main/java/org/cthimm/CC_Mapper_Crashes.java" beforeDir="false" afterPath="$PROJECT_DIR$/namenode/src/main/java/org/cthimm/CC_Mapper_Crashes.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/namenode/src/main/java/org/cthimm/CC_Mapper_Persons.java" beforeDir="false" afterPath="$PROJECT_DIR$/namenode/src/main/java/org/cthimm/CC_Mapper_Persons.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/namenode/src/main/java/org/cthimm/CC_Reducer.java" beforeDir="false" afterPath="$PROJECT_DIR$/namenode/src/main/java/org/cthimm/CC_Reducer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/namenode/src/main/java/org/cthimm/CC_Runner.java" beforeDir="false" afterPath="$PROJECT_DIR$/namenode/src/main/java/org/cthimm/CC_Runner.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/namenode/src/main/java/org/cthimm/TestCC_MapperReducer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/namenode/target/CarCrashes-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/namenode/target/CarCrashes-1.0-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/namenode/target/classes/org/cthimm/CC_Mapper_Crashes.class" beforeDir="false" afterPath="$PROJECT_DIR$/namenode/target/classes/org/cthimm/CC_Mapper_Crashes.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/namenode/target/classes/org/cthimm/CC_Mapper_Persons.class" beforeDir="false" afterPath="$PROJECT_DIR$/namenode/target/classes/org/cthimm/CC_Mapper_Persons.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/namenode/target/classes/org/cthimm/CC_Reducer.class" beforeDir="false" afterPath="$PROJECT_DIR$/namenode/target/classes/org/cthimm/CC_Reducer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/namenode/target/classes/org/cthimm/CC_Runner.class" beforeDir="false" afterPath="$PROJECT_DIR$/namenode/target/classes/org/cthimm/CC_Runner.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/namenode/target/classes/org/cthimm/TestCC_MapperReducer$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/namenode/target/classes/org/cthimm/TestCC_MapperReducer$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/namenode/target/classes/org/cthimm/TestCC_MapperReducer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/namenode/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/namenode/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/namenode/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/namenode/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -42,36 +65,36 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Docker.Dockerfile.executor": "Run",
-    "Docker.datanode/Dockerfile.executor": "Run",
-    "Docker.namenode/Dockerfile.executor": "Run",
-    "Makefile Target.build.executor": "Run",
-    "Maven.CarCrashes [clean].executor": "Run",
-    "Maven.CarCrashes [install].executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.go.formatter.settings.were.checked": "true",
-    "RunOnceActivity.go.migrated.go.modules.settings": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "main",
-    "go.import.settings.migrated": "true",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/Cati/Documents/GitHub/CarCrashes",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.2",
-    "run.code.analysis.last.selected.profile": "pProject Default",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Docker.Dockerfile.executor&quot;: &quot;Run&quot;,
+    &quot;Docker.datanode/Dockerfile.executor&quot;: &quot;Run&quot;,
+    &quot;Docker.namenode/Dockerfile.executor&quot;: &quot;Run&quot;,
+    &quot;Makefile Target.build.executor&quot;: &quot;Run&quot;,
+    &quot;Maven.CarCrashes [clean].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.CarCrashes [install].executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.go.formatter.settings.were.checked&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.go.migrated.go.modules.settings&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;go.import.settings.migrated&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Cati/Documents/GitHub/CarCrashes&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Cati\Documents\GitHub\CarCrashes\namenode\map-reduce" />
@@ -165,7 +188,9 @@
       <workItem from="1718092297002" duration="2013000" />
       <workItem from="1718094976092" duration="4069000" />
       <workItem from="1718108247064" duration="16000" />
-      <workItem from="1718271140112" duration="1164000" />
+      <workItem from="1718271140112" duration="1602000" />
+      <workItem from="1718350649284" duration="2145000" />
+      <workItem from="1718378381736" duration="9773000" />
     </task>
     <servers />
   </component>

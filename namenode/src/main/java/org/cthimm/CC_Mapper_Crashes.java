@@ -1,5 +1,6 @@
 package org.cthimm;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
 import org.apache.hadoop.io.LongWritable;
 import org.apache.hadoop.io.Text;
 import org.apache.hadoop.mapred.MapReduceBase;
@@ -23,6 +24,8 @@ public class CC_Mapper_Crashes extends MapReduceBase implements Mapper<LongWrita
     private static final int OFF_STREET_NAME_INDEX = 9;
     private static final int VEHICLE_TYPE_CODE_1_INDEX = 24;
     private static final int VEHICLE_TYPE_CODE_2_INDEX = 25;
+    private final ObjectMapper objectMapper = new ObjectMapper();
+
 
     public void map(LongWritable key, Text value, OutputCollector<Text, Text> output, Reporter reporter) throws IOException {
         String line = value.toString();
@@ -34,26 +37,15 @@ public class CC_Mapper_Crashes extends MapReduceBase implements Mapper<LongWrita
             String borough = fields[BOROUGH_INDEX];
             String zipCode = fields[ZIP_CODE_INDEX];
             String location = fields[LOCATION_INDEX];
-            String onStreetName = fields[ON_STREET_NAME_INDEX].replaceAll("\\s+","");
-            String offStreetName = fields[OFF_STREET_NAME_INDEX].replaceAll("\\s+","");
+            String onStreetName = fields[ON_STREET_NAME_INDEX].trim();
+            String offStreetName = fields[OFF_STREET_NAME_INDEX].trim();
             String vehicleTypeCode1 = fields[VEHICLE_TYPE_CODE_1_INDEX];
             String vehicleTypeCode2 = fields[VEHICLE_TYPE_CODE_2_INDEX];
+            String collisionId = fields[23];
 
-            // Emit key-value pair with collision_id as key and relevant fields as value
-            String collisionId = fields[23]; // Assuming collision_id is the 23th field
-            String jsonObject = "{" +
-                    "\"crash_date\":\"" + crashDate + "\"," +
-                    "\"crash_time\":\"" + crashTime + "\"," +
-                    "\"borough\":\"" + borough + "\"," +
-                    "\"zip_code\":\"" + zipCode + "\"," +
-                    "\"location\":\"" + location + "\"" +
-                    "\"on_street_name\":\"" + onStreetName + "\"" +
-                    "\"off_street_name\":\"" + offStreetName+ "\"" +
-                    "\"vehicle_type_code_1\":\"" + vehicleTypeCode1 + "\"" +
-                    "\"vehicle_type_code_2\":\"" + vehicleTypeCode2 + "\"" +
-                    "}";
 
-            output.collect(new Text(collisionId), new Text(jsonObject));
+            Crashes crashes = new Crashes(crashDate, crashTime, borough, zipCode, location, onStreetName, offStreetName, vehicleTypeCode1, vehicleTypeCode2);
+            output.collect(new Text(collisionId), new Text(objectMapper.writeValueAsString(crashes)));
         }
     }
 

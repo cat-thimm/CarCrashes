@@ -1,12 +1,13 @@
 services:
   mongo:
     image: mongo
+    container_name: mongo
     restart: always
     volumes:
       - data:/data
-    environment:
-      MONGO_INITDB_ROOT_USERNAME: root
-      MONGO_INITDB_ROOT_PASSWORD: letmein
+#    environment:
+#      MONGO_INITDB_ROOT_USERNAME: root
+#      MONGO_INITDB_ROOT_PASSWORD: letmein
 
   mongo-express:
     image: mongo-express
@@ -18,15 +19,6 @@ services:
       ME_CONFIG_MONGODB_ADMINPASSWORD: letmein
       ME_CONFIG_MONGODB_URL: mongodb://root:letmein@mongo:27017/
       ME_CONFIG_BASICAUTH: false
-
-  # Only for writing new python code
-  #jupyter:
-  #  image: dbsfdit/jupyter:2023.ss
-  #  container_name: dbsfdit-jupyter
-  #  ports:
-  #    - "5678:8888"
-  #   volumes:
-  #     - ../namenode/map-reduce:/home/jovyan/map-reduce
 
   namenode:
     build:

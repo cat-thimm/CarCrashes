@@ -32,5 +32,12 @@
             <artifactId>commons-csv</artifactId>
             <version>1.8</version> <!-- Or the latest version -->
         </dependency>
+
+        <dependency>
+            <groupId>org.mongodb.mongo-hadoop</groupId>
+            <artifactId>mongo-hadoop-core</artifactId>
+            <version>1.5.1</version>
+        </dependency>
+
     </dependencies>
 </project>
