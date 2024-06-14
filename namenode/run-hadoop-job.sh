@@ -26,7 +26,6 @@ fi
 
 hadoop jar /snapshot.jar org.cthimm.CC_Runner /raw_data/crashes.csv /raw_data/persons.csv /output
 
-
 # Check if the job completed successfully and the output directory exists
 if hadoop fs -test -e /output; then
   echo "Hadoop streaming job completed successfully."
@@ -35,3 +34,4 @@ else
   echo "Hadoop streaming job failed."
 fi
 
+hdfs dfs -cat /output/part-00000 | sed '$s/.$/]/' > data.json

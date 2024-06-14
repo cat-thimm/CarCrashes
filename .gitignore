@@ -4,3 +4,4 @@ namenode/raw_data/*
 debug
 data.json
 test.json
+namenode/target

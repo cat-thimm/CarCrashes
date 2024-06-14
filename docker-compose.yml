@@ -17,7 +17,7 @@ services:
     environment:
       ME_CONFIG_MONGODB_ADMINUSERNAME: root
       ME_CONFIG_MONGODB_ADMINPASSWORD: letmein
-      ME_CONFIG_MONGODB_URL: mongodb://root:letmein@mongo:27017/
+      ME_CONFIG_MONGODB_URL: mongodb://mongo:27017/
       ME_CONFIG_BASICAUTH: false
 
   namenode:
