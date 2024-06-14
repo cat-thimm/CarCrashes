@@ -26,27 +26,29 @@ public class CC_Mapper_Crashes extends MapReduceBase implements Mapper<LongWrita
     private static final int VEHICLE_TYPE_CODE_2_INDEX = 25;
     private final ObjectMapper objectMapper = new ObjectMapper();
 
+    private static final int HEADER_LINE_INDEX = 0; // Index of the header line (assuming it's the first line)
 
     public void map(LongWritable key, Text value, OutputCollector<Text, Text> output, Reporter reporter) throws IOException {
+        if (key.get() == HEADER_LINE_INDEX) {
+            return;
+        }
         String line = value.toString();
         String[] fields = parseCSVLine(line);
 
-        if (fields.length >= 26) { // Ensure the line has at least 26 fields
-            String crashDate = fields[CRASH_DATE_INDEX];
-            String crashTime = fields[CRASH_TIME_INDEX];
-            String borough = fields[BOROUGH_INDEX];
-            String zipCode = fields[ZIP_CODE_INDEX];
-            String location = fields[LOCATION_INDEX];
-            String onStreetName = fields[ON_STREET_NAME_INDEX].trim();
-            String offStreetName = fields[OFF_STREET_NAME_INDEX].trim();
-            String vehicleTypeCode1 = fields[VEHICLE_TYPE_CODE_1_INDEX];
-            String vehicleTypeCode2 = fields[VEHICLE_TYPE_CODE_2_INDEX];
-            String collisionId = fields[23];
+        String crashDate = FieldExtractionHelper.extractField(fields, CRASH_DATE_INDEX);
+        String crashTime = FieldExtractionHelper.extractField(fields, CRASH_TIME_INDEX);
+        String borough = FieldExtractionHelper.extractField(fields, BOROUGH_INDEX);
+        String zipCode = FieldExtractionHelper.extractField(fields, ZIP_CODE_INDEX);
+        String location = FieldExtractionHelper.extractField(fields, LOCATION_INDEX);
+        String onStreetName = FieldExtractionHelper.extractField(fields, ON_STREET_NAME_INDEX).trim();
+        String offStreetName = FieldExtractionHelper.extractField(fields, OFF_STREET_NAME_INDEX).trim();
+        String vehicleTypeCode1 = FieldExtractionHelper.extractField(fields, VEHICLE_TYPE_CODE_1_INDEX);
+        String vehicleTypeCode2 = FieldExtractionHelper.extractField(fields, VEHICLE_TYPE_CODE_2_INDEX);
+        String collisionId = FieldExtractionHelper.extractField(fields, 23);
 
 
-            Crashes crashes = new Crashes(crashDate, crashTime, borough, zipCode, location, onStreetName, offStreetName, vehicleTypeCode1, vehicleTypeCode2);
-            output.collect(new Text(collisionId), new Text(objectMapper.writeValueAsString(crashes)));
-        }
+        Crashes crashes = new Crashes(crashDate, crashTime, borough, zipCode, location, onStreetName, offStreetName, vehicleTypeCode1, vehicleTypeCode2);
+        output.collect(new Text(collisionId), new Text(objectMapper.writeValueAsString(crashes)));
     }
 
     private String[] parseCSVLine(String line) {

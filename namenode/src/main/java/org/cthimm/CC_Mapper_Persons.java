@@ -2,6 +2,7 @@ package org.cthimm;
 
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -26,25 +27,27 @@ public class CC_Mapper_Persons extends MapReduceBase implements Mapper<LongWrita
         }
 
         String[] fields = parseCSVLine(line);
-
-        if (fields.length >= 20) {
-            String collisionId = fields[1];
-            String personType = fields[5];
-            String personAge = fields[8];
-            String emotionalStatus = fields[10];
-            String bodilyInjury = fields[11];
-            String safetyEquipment = fields[13];
-            String personGender = fields[20]; // equals person_sex
-
-            // Data Cleaning: Check person's age between 0 and 125
-            if (isValidAge(personAge)) {
-
-                // Output uniqueId as key and Person obj as value
-                Person v = new Person(personType, personAge, emotionalStatus, bodilyInjury, safetyEquipment, personGender);
-                output.collect(new Text(collisionId), new Text(objectMapper.writeValueAsString(v)));
-            }
+        String collisionId = FieldExtractionHelper.extractField(fields, 1);
+        String personType =   FieldExtractionHelper.extractField(fields, 5);
+        if (collisionId == null || personType == null) {
+            throw new RuntimeException(new IllegalArgumentException(Arrays.toString(fields)));
         }
+        String personAge =   FieldExtractionHelper.extractField(fields, 8);
+        String emotionalStatus =   FieldExtractionHelper.extractField(fields, 10);
+        String bodilyInjury =   FieldExtractionHelper.extractField(fields, 11);
+        String safetyEquipment =   FieldExtractionHelper.extractField(fields, 13);
+        String personGender =   FieldExtractionHelper.extractField(fields, 20); // equals person_sex
+
+        // Data Cleaning: Check person's age between 0 and 125
+        if (isValidAge(personAge)) {
+
+            // Output uniqueId as key and Person obj as value
+            Person v = new Person(personType, personAge, emotionalStatus, bodilyInjury, safetyEquipment, personGender);
+            output.collect(new Text(collisionId), new Text(objectMapper.writeValueAsString(v)));
+        }
+
     }
+
 
     private boolean isValidAge(String personAge) {
         try {

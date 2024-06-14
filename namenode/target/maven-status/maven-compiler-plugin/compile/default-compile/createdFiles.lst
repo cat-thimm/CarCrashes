@@ -1,3 +1,4 @@
+org\cthimm\FieldExtractionHelper.class
 org\cthimm\JsonOutputFormat$JsonRecordWriter.class
 org\cthimm\CC_Mapper_Persons.class
 org\cthimm\CC_Runner.class

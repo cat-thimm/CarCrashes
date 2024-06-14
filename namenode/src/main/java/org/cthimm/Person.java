@@ -1,5 +1,7 @@
 package org.cthimm;
 
+import java.util.Optional;
+
 public class Person {
     String type;
     String age;
@@ -9,12 +11,12 @@ public class Person {
     String gender;
 
     public Person(String type, String age, String emotionalStatus, String bodilyInjury, String safetyEquipment, String gender) {
-        this.type = type;
-        this.age = age;
-        this.emotionalStatus = emotionalStatus;
-        this.bodilyInjury = bodilyInjury;
-        this.safetyEquipment = safetyEquipment;
-        this.gender = gender;
+        this.type = Optional.ofNullable(type).orElse("");
+        this.age = Optional.ofNullable(age).orElse("");
+        this.emotionalStatus = Optional.ofNullable(emotionalStatus).orElse("");
+        this.bodilyInjury = Optional.ofNullable(bodilyInjury).orElse("");
+        this.safetyEquipment = Optional.ofNullable(safetyEquipment).orElse("");
+        this.gender = Optional.ofNullable(gender).orElse("");
     }
 
     public String getType() {
@@ -30,6 +32,7 @@ public class Person {
     }
 
     public Person() {
+        this(null, null, null, null, null, null);
     }
 
     public void setAge(String age) {

@@ -1,5 +1,7 @@
 package org.cthimm;
 
+import java.util.Optional;
+
 public class Crashes {
     String crashDate;
     String crashTime;
@@ -12,6 +14,7 @@ public class Crashes {
     String vehicleTypeCode2;
 
     public Crashes() {
+        this(null,null,null,null,null,null,null,null,null);
     }
 
     public String getCrashDate() {
@@ -87,14 +90,14 @@ public class Crashes {
     }
 
     public Crashes(String crashDate, String crashTime, String borough, String zipCode, String location, String onStreetName, String offStreetName, String vehicleTypeCode1, String vehicleTypeCode2) {
-        this.crashDate = crashDate;
-        this.crashTime = crashTime;
-        this.borough = borough;
-        this.zipCode = zipCode;
-        this.location = location;
-        this.onStreetName = onStreetName;
-        this.offStreetName = offStreetName;
-        this.vehicleTypeCode1 = vehicleTypeCode1;
-        this.vehicleTypeCode2 = vehicleTypeCode2;
+        this.crashDate = Optional.ofNullable(crashDate).orElse("");
+        this.crashTime = Optional.ofNullable(crashTime).orElse("");
+        this.borough = Optional.ofNullable(borough).orElse("");
+        this.zipCode = Optional.ofNullable(zipCode).orElse("");
+        this.location = Optional.ofNullable(location).orElse("");
+        this.onStreetName = Optional.ofNullable(onStreetName).orElse("");
+        this.offStreetName = Optional.ofNullable(offStreetName).orElse("");
+        this.vehicleTypeCode1 = Optional.ofNullable(vehicleTypeCode1).orElse("");
+        this.vehicleTypeCode2 = Optional.ofNullable(vehicleTypeCode2).orElse("");
     }
 }
