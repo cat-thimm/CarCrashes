@@ -38,9 +38,7 @@ services:
     platform: linux/amd64
 
   datanode:
-    build:
-      context: ./
-      dockerfile: ./datanode/Dockerfile
+    image: bde2020/hadoop-datanode:2.0.0-hadoop3.2.1-java8
     container_name: datanode
     restart: always
     volumes:
@@ -54,9 +52,7 @@ services:
     platform: linux/amd64
 
   resourcemanager:
-    build:
-      context: ./
-      dockerfile: ./resourcemanager/Dockerfile
+    image: bde2020/hadoop-resourcemanager:2.0.0-hadoop3.2.1-java8
     container_name: resourcemanager
     restart: always
     environment:
@@ -68,9 +64,7 @@ services:
     platform: linux/amd64
 
   nodemanager1:
-    build:
-      context: ./
-      dockerfile: ./nodemanager/Dockerfile
+    image: bde2020/hadoop-nodemanager:2.0.0-hadoop3.2.1-java8
     container_name: nodemanager
     restart: always
     environment:
@@ -82,9 +76,7 @@ services:
     platform: linux/amd64
 
   historyserver:
-    build:
-      context: ./
-      dockerfile: ./historyserver/Dockerfile
+    image: bde2020/hadoop-historyserver:2.0.0-hadoop3.2.1-java8
     container_name: historyserver
     restart: always
     environment:
