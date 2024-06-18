@@ -10,6 +10,10 @@ public class Person {
     String safetyEquipment;
     String gender;
 
+    public Person() {
+        this(null, null, null, null, null, null);
+    }
+
     public Person(String type, String age, String emotionalStatus, String bodilyInjury, String safetyEquipment, String gender) {
         this.type = Optional.ofNullable(type).orElse("");
         this.age = Optional.ofNullable(age).orElse("");
@@ -31,9 +35,7 @@ public class Person {
         return age;
     }
 
-    public Person() {
-        this(null, null, null, null, null, null);
-    }
+
 
     public void setAge(String age) {
         this.age = age;

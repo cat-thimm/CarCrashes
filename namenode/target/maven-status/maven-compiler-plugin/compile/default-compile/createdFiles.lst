@@ -2,6 +2,7 @@ org\cthimm\FieldExtractionHelper.class
 org\cthimm\JsonOutputFormat$JsonRecordWriter.class
 org\cthimm\CC_Mapper_Persons.class
 org\cthimm\CC_Runner.class
+org\cthimm\DateTimeFormat.class
 org\cthimm\CC_Reducer.class
 org\cthimm\Test.class
 org\cthimm\CC_Mapper_Crashes.class

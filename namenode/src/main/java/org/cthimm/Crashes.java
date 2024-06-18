@@ -3,6 +3,7 @@ package org.cthimm;
 import java.util.Optional;
 
 public class Crashes {
+    String collisionId;
     String crashDate;
     String crashTime;
     String borough;
@@ -14,7 +15,28 @@ public class Crashes {
     String vehicleTypeCode2;
 
     public Crashes() {
-        this(null,null,null,null,null,null,null,null,null);
+        this(null,null,null,null,null,null,null,null,null,null);
+    }
+
+    public Crashes(String collisionId, String crashDate, String crashTime, String borough, String zipCode, String location, String onStreetName, String offStreetName, String vehicleTypeCode1, String vehicleTypeCode2) {
+        this.collisionId = Optional.ofNullable(collisionId).orElse("");
+        this.crashDate = Optional.ofNullable(crashDate).orElse("");
+        this.crashTime = Optional.ofNullable(crashTime).orElse("");
+        this.borough = Optional.ofNullable(borough).orElse("");
+        this.zipCode = Optional.ofNullable(zipCode).orElse("");
+        this.location = Optional.ofNullable(location).orElse("");
+        this.onStreetName = Optional.ofNullable(onStreetName).orElse("");
+        this.offStreetName = Optional.ofNullable(offStreetName).orElse("");
+        this.vehicleTypeCode1 = Optional.ofNullable(vehicleTypeCode1).orElse("");
+        this.vehicleTypeCode2 = Optional.ofNullable(vehicleTypeCode2).orElse("");
+    }
+
+    public String getCollisionId() {
+        return collisionId;
+    }
+
+    public void setCollisionId(String collisionId) {
+        this.collisionId = collisionId;
     }
 
     public String getCrashDate() {
@@ -89,15 +111,5 @@ public class Crashes {
         this.vehicleTypeCode2 = vehicleTypeCode2;
     }
 
-    public Crashes(String crashDate, String crashTime, String borough, String zipCode, String location, String onStreetName, String offStreetName, String vehicleTypeCode1, String vehicleTypeCode2) {
-        this.crashDate = Optional.ofNullable(crashDate).orElse("");
-        this.crashTime = Optional.ofNullable(crashTime).orElse("");
-        this.borough = Optional.ofNullable(borough).orElse("");
-        this.zipCode = Optional.ofNullable(zipCode).orElse("");
-        this.location = Optional.ofNullable(location).orElse("");
-        this.onStreetName = Optional.ofNullable(onStreetName).orElse("");
-        this.offStreetName = Optional.ofNullable(offStreetName).orElse("");
-        this.vehicleTypeCode1 = Optional.ofNullable(vehicleTypeCode1).orElse("");
-        this.vehicleTypeCode2 = Optional.ofNullable(vehicleTypeCode2).orElse("");
-    }
+
 }

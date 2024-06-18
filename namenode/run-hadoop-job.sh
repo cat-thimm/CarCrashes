@@ -34,4 +34,5 @@ else
   echo "Hadoop streaming job failed."
 fi
 
-hdfs dfs -cat /output/part-00000 | sed '$s/.$/]/' > data.json
+hdfs dfs -cat /output/part-00000 > data.json
+echo "]" >> data.json
