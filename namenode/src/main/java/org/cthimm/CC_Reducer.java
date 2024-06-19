@@ -18,7 +18,7 @@ public class CC_Reducer extends MapReduceBase implements Reducer<Text, Text, Tex
     public void reduce(Text key, Iterator<Text> values, OutputCollector<Text, NullWritable> output, Reporter reporter) throws IOException {
         boolean hasCrashTime = false;
         Map<String, Object> crashDetails = new HashMap<>();
-        List<Person> persons = new ArrayList<>();
+        Set<Person> uniquePersons = new HashSet<>(); // Filter duplicates by not adding them to the map
 
         while (values.hasNext()) {
             String value = values.next().toString();
@@ -29,29 +29,25 @@ public class CC_Reducer extends MapReduceBase implements Reducer<Text, Text, Tex
                 hasCrashTime = true;
             } else if (valueMap.containsKey("age")) {
                 Person person = mapper.convertValue(valueMap, Person.class);
-                persons.add(person);
+                uniquePersons.add(person);  // Add to set, duplicates will be ignored
             }
-
-            if (!hasCrashTime) {
-                crashDetails.putAll(mapper.convertValue(new Crashes(), Map.class));
-            }
-
-//            if (persons.isEmpty()) {
-//                persons.add(mapper.convertValue(new Person(), Person.class));
-//            }
-
-            crashDetails.put("persons", persons);
-
-            String combinedJson = mapper.writeValueAsString(crashDetails);
-
-            if (start) {
-                combinedJson = "[" + combinedJson;
-                start = false;
-            } else {
-                combinedJson = "," + combinedJson;
-            }
-
-            output.collect(new Text(combinedJson), NullWritable.get());
         }
+
+        if (!hasCrashTime) {
+            crashDetails.putAll(mapper.convertValue(new Crashes(), Map.class));
+        }
+
+        crashDetails.put("persons", new ArrayList<>(uniquePersons));
+
+        String combinedJson = mapper.writeValueAsString(crashDetails);
+
+        if (start) {
+            combinedJson = "[" + combinedJson;
+            start = false;
+        } else {
+            combinedJson = "," + combinedJson;
+        }
+
+        output.collect(new Text(combinedJson), NullWritable.get());
     }
 }

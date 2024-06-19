@@ -1,4 +1,12 @@
 services:
+  jupyter:
+    image: dbsfdit/jupyter:2023.ss
+    container_name: dbsfdit-jupyter
+    ports:
+      - "5678:8888"
+    volumes:
+      - ./analysis:/home/jovyan/main
+
   mongo:
     image: mongo
     container_name: mongo

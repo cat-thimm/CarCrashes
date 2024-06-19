@@ -12,10 +12,7 @@ import org.apache.hadoop.mapred.Reporter;
 import java.io.IOException;
 
 import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.util.Date;
-import java.util.regex.Pattern;
-
+import java.util.Objects;
 
 public class CC_Mapper_Crashes extends MapReduceBase implements Mapper<LongWritable, Text, Text, Text> {
     private final ObjectMapper objectMapper = new ObjectMapper();
@@ -61,7 +58,11 @@ public class CC_Mapper_Crashes extends MapReduceBase implements Mapper<LongWrita
         String offStreetName = FieldExtractionHelper.extractField(fields, 9);
         String vehicleTypeCode1 = FieldExtractionHelper.extractField(fields, 24);
         String vehicleTypeCode2 = FieldExtractionHelper.extractField(fields, 25);
+        String contributingFactorVehicle1 = Objects.equals(FieldExtractionHelper.extractField(fields, 18), "Unspecified") ? null : FieldExtractionHelper.extractField(fields, 18);
+        String contributingFactorVehicle2 = Objects.equals(FieldExtractionHelper.extractField(fields, 19), "Unspecified") ? null : FieldExtractionHelper.extractField(fields, 18);
+        String numberOfPersonsInjured = FieldExtractionHelper.extractField(fields, 10);
+        String numberOfPersonsKilled = FieldExtractionHelper.extractField(fields, 11);
 
-        return new Crashes(collisionId, crashDate, crashTime, borough, zipCode, location, onStreetName, offStreetName, vehicleTypeCode1, vehicleTypeCode2);
+        return new Crashes(collisionId, crashDate, crashTime, borough, zipCode, location, onStreetName, offStreetName, vehicleTypeCode1, vehicleTypeCode2, contributingFactorVehicle1, contributingFactorVehicle2, numberOfPersonsInjured, numberOfPersonsKilled);
     }
 }

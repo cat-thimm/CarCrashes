@@ -1,6 +1,7 @@
 package org.cthimm;
 
 import java.io.IOException;
+
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.apache.hadoop.io.LongWritable;
 import org.apache.hadoop.io.Text;
@@ -27,26 +28,45 @@ public class CC_Mapper_Persons extends MapReduceBase implements Mapper<LongWrita
         String collisionId = FieldExtractionHelper.extractField(fields, 1);
         String personType = FieldExtractionHelper.extractField(fields, 5);
         String personAge = FieldExtractionHelper.extractField(fields, 8);
-        String emotionalStatus = FieldExtractionHelper.extractField(fields, 10);
-        String bodilyInjury = FieldExtractionHelper.extractField(fields, 11);
+        String emotionalStatus = cleanUpField(FieldExtractionHelper.extractField(fields, 10));
+        String bodilyInjury = cleanUpField(FieldExtractionHelper.extractField(fields, 11));
+        String positionInVehicle = FieldExtractionHelper.extractField(fields, 12);
         String safetyEquipment = FieldExtractionHelper.extractField(fields, 13);
-        String personGender = FieldExtractionHelper.extractField(fields, 20);
+        String pedRole = FieldExtractionHelper.extractField(fields, 17);
+        String personGender = cleanupGender(FieldExtractionHelper.extractField(fields, 20));
 
         // Data Cleaning: Check person's age between 0 and 125
         if (isValidAge(personAge)) {
             // Create Person object with null checks
             Person person = new Person(
-                    personType != null ? personType : "",
-                    personAge != null ? personAge : "",
-                    emotionalStatus != null ? emotionalStatus : "",
-                    bodilyInjury != null ? bodilyInjury : "",
-                    safetyEquipment != null ? safetyEquipment : "",
-                    personGender != null ? personGender : ""
+                    personType,
+                    personAge,
+                    emotionalStatus,
+                    bodilyInjury,
+                    positionInVehicle,
+                    safetyEquipment,
+                    pedRole,
+                    personGender
             );
 
             // Output collisionId as key and Person object as value
             output.collect(new Text(collisionId), new Text(objectMapper.writeValueAsString(person)));
         }
+    }
+
+    private String cleanupGender(String gender) {
+        switch (gender) {
+            case "M":
+                return "Male";
+            case "F":
+                return "Female";
+            default:
+                return null;
+        }
+    }
+
+    private String cleanUpField(String field) {
+        return field.equals("Does Not Apply") || field.equals("Unknown") ? null : field;
     }
 
     private boolean isValidAge(String personAge) {

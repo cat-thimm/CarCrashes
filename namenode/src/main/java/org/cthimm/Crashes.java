@@ -13,12 +13,16 @@ public class Crashes {
     String offStreetName;
     String vehicleTypeCode1;
     String vehicleTypeCode2;
+    String contributingFactorVehicle1;
+    String contributingFactorVehicle2;
+    String numberOfPersonsInjured;
+    String numberOfPersonsKilled;
 
     public Crashes() {
-        this(null,null,null,null,null,null,null,null,null,null);
+        this(null,null,null,null,null,null,null,null,null,null, null, null, null, null);
     }
 
-    public Crashes(String collisionId, String crashDate, String crashTime, String borough, String zipCode, String location, String onStreetName, String offStreetName, String vehicleTypeCode1, String vehicleTypeCode2) {
+    public Crashes(String collisionId, String crashDate, String crashTime, String borough, String zipCode, String location, String onStreetName, String offStreetName, String vehicleTypeCode1, String vehicleTypeCode2, String contributingFactorVehicle1, String contributingFactorVehicle2, String numberOfPersonsInjured, String numberOfPersonsKilled) {
         this.collisionId = Optional.ofNullable(collisionId).orElse("");
         this.crashDate = Optional.ofNullable(crashDate).orElse("");
         this.crashTime = Optional.ofNullable(crashTime).orElse("");
@@ -29,6 +33,42 @@ public class Crashes {
         this.offStreetName = Optional.ofNullable(offStreetName).orElse("");
         this.vehicleTypeCode1 = Optional.ofNullable(vehicleTypeCode1).orElse("");
         this.vehicleTypeCode2 = Optional.ofNullable(vehicleTypeCode2).orElse("");
+        this.contributingFactorVehicle1 = Optional.ofNullable(contributingFactorVehicle1).orElse("");
+        this.contributingFactorVehicle2 = Optional.ofNullable(contributingFactorVehicle2).orElse("");
+        this.numberOfPersonsInjured = Optional.ofNullable(numberOfPersonsInjured).orElse("");
+        this.numberOfPersonsKilled = Optional.ofNullable(numberOfPersonsKilled).orElse("");
+    }
+
+    public String getContributingFactorVehicle1() {
+        return contributingFactorVehicle1;
+    }
+
+    public void setContributingFactorVehicle1(String contributingFactorVehicle1) {
+        this.contributingFactorVehicle1 = contributingFactorVehicle1;
+    }
+
+    public String getContributingFactorVehicle2() {
+        return contributingFactorVehicle2;
+    }
+
+    public void setContributingFactorVehicle2(String contributingFactorVehicle2) {
+        this.contributingFactorVehicle2 = contributingFactorVehicle2;
+    }
+
+    public String getNumberOfPersonsInjured() {
+        return numberOfPersonsInjured;
+    }
+
+    public void setNumberOfPersonsInjured(String numberOfPersonsInjured) {
+        this.numberOfPersonsInjured = numberOfPersonsInjured;
+    }
+
+    public String getNumberOfPersonsKilled() {
+        return numberOfPersonsKilled;
+    }
+
+    public void setNumberOfPersonsKilled(String numberOfPersonsKilled) {
+        this.numberOfPersonsKilled = numberOfPersonsKilled;
     }
 
     public String getCollisionId() {
