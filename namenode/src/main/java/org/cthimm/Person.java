@@ -5,7 +5,7 @@ import java.util.Optional;
 
 public class Person {
     String type;
-    String age;
+    Integer age;
     String emotionalStatus;
     String bodilyInjury;
     String positionInVehicle;
@@ -18,9 +18,9 @@ public class Person {
         this(null, null, null, null, null, null, null, null);
     }
 
-    public Person(String type, String age, String emotionalStatus, String bodilyInjury, String positionInVehicle, String safetyEquipment, String pedRole, String gender) {
+    public Person(String type, Integer age, String emotionalStatus, String bodilyInjury, String positionInVehicle, String safetyEquipment, String pedRole, String gender) {
         this.type = Optional.ofNullable(type).orElse("");
-        this.age = Optional.ofNullable(age).orElse("");
+        this.age = Optional.ofNullable(age).orElse(-1);
         this.emotionalStatus = Optional.ofNullable(emotionalStatus).orElse("");
         this.bodilyInjury = Optional.ofNullable(bodilyInjury).orElse("");
         this.positionInVehicle = Optional.ofNullable(positionInVehicle).orElse("");
@@ -37,7 +37,7 @@ public class Person {
         this.type = type;
     }
 
-    public String getAge() {
+    public Integer getAge() {
         return age;
     }
 
@@ -49,7 +49,7 @@ public class Person {
         this.positionInVehicle = positionInVehicle;
     }
 
-    public void setAge(String age) {
+    public void setAge(Integer age) {
         this.age = age;
     }
 

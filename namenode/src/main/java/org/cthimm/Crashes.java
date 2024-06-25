@@ -1,5 +1,6 @@
 package org.cthimm;
 
+import java.util.Date;
 import java.util.Optional;
 
 public class Crashes {
@@ -15,16 +16,16 @@ public class Crashes {
     String vehicleTypeCode2;
     String contributingFactorVehicle1;
     String contributingFactorVehicle2;
-    String numberOfPersonsInjured;
-    String numberOfPersonsKilled;
+    Integer numberOfPersonsInjured;
+    Integer numberOfPersonsKilled;
 
     public Crashes() {
         this(null,null,null,null,null,null,null,null,null,null, null, null, null, null);
     }
 
-    public Crashes(String collisionId, String crashDate, String crashTime, String borough, String zipCode, String location, String onStreetName, String offStreetName, String vehicleTypeCode1, String vehicleTypeCode2, String contributingFactorVehicle1, String contributingFactorVehicle2, String numberOfPersonsInjured, String numberOfPersonsKilled) {
+    public Crashes(String collisionId, String crashDate, String crashTime, String borough, String zipCode, String location, String onStreetName, String offStreetName, String vehicleTypeCode1, String vehicleTypeCode2, String contributingFactorVehicle1, String contributingFactorVehicle2, Integer numberOfPersonsInjured, Integer numberOfPersonsKilled) {
         this.collisionId = Optional.ofNullable(collisionId).orElse("");
-        this.crashDate = Optional.ofNullable(crashDate).orElse("");
+        this.crashDate = crashDate; // Date type, no need for Optional
         this.crashTime = Optional.ofNullable(crashTime).orElse("");
         this.borough = Optional.ofNullable(borough).orElse("");
         this.zipCode = Optional.ofNullable(zipCode).orElse("");
@@ -35,8 +36,8 @@ public class Crashes {
         this.vehicleTypeCode2 = Optional.ofNullable(vehicleTypeCode2).orElse("");
         this.contributingFactorVehicle1 = Optional.ofNullable(contributingFactorVehicle1).orElse("");
         this.contributingFactorVehicle2 = Optional.ofNullable(contributingFactorVehicle2).orElse("");
-        this.numberOfPersonsInjured = Optional.ofNullable(numberOfPersonsInjured).orElse("");
-        this.numberOfPersonsKilled = Optional.ofNullable(numberOfPersonsKilled).orElse("");
+        this.numberOfPersonsInjured = numberOfPersonsInjured;
+        this.numberOfPersonsKilled = numberOfPersonsKilled;
     }
 
     public String getContributingFactorVehicle1() {
@@ -55,19 +56,19 @@ public class Crashes {
         this.contributingFactorVehicle2 = contributingFactorVehicle2;
     }
 
-    public String getNumberOfPersonsInjured() {
+    public Integer getNumberOfPersonsInjured() {
         return numberOfPersonsInjured;
     }
 
-    public void setNumberOfPersonsInjured(String numberOfPersonsInjured) {
+    public void setNumberOfPersonsInjured(Integer numberOfPersonsInjured) {
         this.numberOfPersonsInjured = numberOfPersonsInjured;
     }
 
-    public String getNumberOfPersonsKilled() {
+    public Integer getNumberOfPersonsKilled() {
         return numberOfPersonsKilled;
     }
 
-    public void setNumberOfPersonsKilled(String numberOfPersonsKilled) {
+    public void setNumberOfPersonsKilled(Integer numberOfPersonsKilled) {
         this.numberOfPersonsKilled = numberOfPersonsKilled;
     }
 
@@ -150,6 +151,4 @@ public class Crashes {
     public void setVehicleTypeCode2(String vehicleTypeCode2) {
         this.vehicleTypeCode2 = vehicleTypeCode2;
     }
-
-
 }

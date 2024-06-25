@@ -27,7 +27,7 @@ public class CC_Mapper_Persons extends MapReduceBase implements Mapper<LongWrita
         // Extract fields with checks for null or empty values
         String collisionId = FieldExtractionHelper.extractField(fields, 1);
         String personType = FieldExtractionHelper.extractField(fields, 5);
-        String personAge = FieldExtractionHelper.extractField(fields, 8);
+        Integer personAge = FieldExtractionHelper.parseToInteger(FieldExtractionHelper.extractField(fields, 8));
         String emotionalStatus = cleanUpField(FieldExtractionHelper.extractField(fields, 10));
         String bodilyInjury = cleanUpField(FieldExtractionHelper.extractField(fields, 11));
         String positionInVehicle = FieldExtractionHelper.extractField(fields, 12);
@@ -69,10 +69,13 @@ public class CC_Mapper_Persons extends MapReduceBase implements Mapper<LongWrita
         return field.equals("Does Not Apply") || field.equals("Unknown") ? null : field;
     }
 
-    private boolean isValidAge(String personAge) {
+    private boolean isValidAge(Integer personAge) {
+        if(personAge == null) {
+            return true;
+        }
+
         try {
-            int age = Integer.parseInt(personAge);
-            return (age >= 0 && age <= 114);
+            return (personAge >= 0 && personAge <= 114);
         } catch (NumberFormatException e) {
             return false;
         }

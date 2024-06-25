@@ -60,8 +60,8 @@ public class CC_Mapper_Crashes extends MapReduceBase implements Mapper<LongWrita
         String vehicleTypeCode2 = FieldExtractionHelper.extractField(fields, 25);
         String contributingFactorVehicle1 = Objects.equals(FieldExtractionHelper.extractField(fields, 18), "Unspecified") ? null : FieldExtractionHelper.extractField(fields, 18);
         String contributingFactorVehicle2 = Objects.equals(FieldExtractionHelper.extractField(fields, 19), "Unspecified") ? null : FieldExtractionHelper.extractField(fields, 18);
-        String numberOfPersonsInjured = FieldExtractionHelper.extractField(fields, 10);
-        String numberOfPersonsKilled = FieldExtractionHelper.extractField(fields, 11);
+        Integer numberOfPersonsInjured = FieldExtractionHelper.parseToInteger(FieldExtractionHelper.extractField(fields, 10));
+        Integer numberOfPersonsKilled = FieldExtractionHelper.parseToInteger(FieldExtractionHelper.extractField(fields, 11));
 
         return new Crashes(collisionId, crashDate, crashTime, borough, zipCode, location, onStreetName, offStreetName, vehicleTypeCode1, vehicleTypeCode2, contributingFactorVehicle1, contributingFactorVehicle2, numberOfPersonsInjured, numberOfPersonsKilled);
     }
