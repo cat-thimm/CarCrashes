@@ -5,24 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="28dbcf8a-54b4-410a-994d-4f9ea053a098" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/analysis/analysis.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/analysis/analysis.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/namenode/mongo-transfer.sh" beforeDir="false" afterPath="$PROJECT_DIR$/namenode/mongo-transfer.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/namenode/src/main/java/org/cthimm/CC_Mapper_Crashes.java" beforeDir="false" afterPath="$PROJECT_DIR$/namenode/src/main/java/org/cthimm/CC_Mapper_Crashes.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/namenode/src/main/java/org/cthimm/CC_Mapper_Persons.java" beforeDir="false" afterPath="$PROJECT_DIR$/namenode/src/main/java/org/cthimm/CC_Mapper_Persons.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/namenode/src/main/java/org/cthimm/Crashes.java" beforeDir="false" afterPath="$PROJECT_DIR$/namenode/src/main/java/org/cthimm/Crashes.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/namenode/src/main/java/org/cthimm/FieldExtractionHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/namenode/src/main/java/org/cthimm/FieldExtractionHelper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/namenode/src/main/java/org/cthimm/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/namenode/src/main/java/org/cthimm/Person.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/namenode/target/CarCrashes-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/namenode/target/CarCrashes-1.0-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/namenode/target/classes/org/cthimm/CC_Mapper_Crashes.class" beforeDir="false" afterPath="$PROJECT_DIR$/namenode/target/classes/org/cthimm/CC_Mapper_Crashes.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/namenode/target/classes/org/cthimm/CC_Mapper_Persons.class" beforeDir="false" afterPath="$PROJECT_DIR$/namenode/target/classes/org/cthimm/CC_Mapper_Persons.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/namenode/target/classes/org/cthimm/CC_Reducer.class" beforeDir="false" afterPath="$PROJECT_DIR$/namenode/target/classes/org/cthimm/CC_Reducer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/namenode/target/classes/org/cthimm/Crashes.class" beforeDir="false" afterPath="$PROJECT_DIR$/namenode/target/classes/org/cthimm/Crashes.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/namenode/target/classes/org/cthimm/Person.class" beforeDir="false" afterPath="$PROJECT_DIR$/namenode/target/classes/org/cthimm/Person.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/namenode/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/namenode/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/namenode/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/namenode/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/analysis/.ipynb_checkpoints/Untitled1-checkpoint.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/analysis/Untitled1.ipynb" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -195,7 +180,8 @@
       <workItem from="1718620506929" duration="4167000" />
       <workItem from="1718782017492" duration="8923000" />
       <workItem from="1719048731793" duration="2152000" />
-      <workItem from="1719155143438" duration="5918000" />
+      <workItem from="1719155143438" duration="7209000" />
+      <workItem from="1719518856382" duration="4152000" />
     </task>
     <servers />
   </component>
